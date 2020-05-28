@@ -12,9 +12,9 @@ edit: od tego mamy kartê pacjenta z histori¹ jego wizyt :)
 CREATE TABLE szpital.dbo.specjalnosci (
 	ID INT NOT NULL,
 	min_stawka MONEY NOT NULL,
+	opis_specjalnosci varchar(100),
 
 	PRIMARY KEY (ID)
-
 )
 
 /*
@@ -31,6 +31,7 @@ CREATE TABLE szpital.dbo.budynki (
 CREATE TABLE szpital.dbo.oddzialy (
 	ID INT NOT NULL,
 	budynek INT not null,
+	opis_oddzialu varchar(100),
 	/*
 	Tak mysle co z tym szefem, i narazie nie wiem xD
 	edit: Dodaj¹c tutaj szefa duplikujemy informacjê w bazie danych (to info ju¿ jest w innej nowej tabeli). 
@@ -63,6 +64,7 @@ CREATE TABLE szpital.dbo.lekarze (
 	specjalnosc INT not null,
 	/*
 	edit: Zostawiam Tobie tego constrainta
+	edit 28.05.2020: Próbowa³em zrobiæ podobny constraint dla tabeli ordynatorów i mi nie zbyt idzie wiec narazie zostawiam
 	*/
 	zarobki MONEY NOT NULL,
 	oddzial INT Not null,
@@ -72,6 +74,21 @@ CREATE TABLE szpital.dbo.lekarze (
 	FOREIGN KEY (specjalnosc) REFERENCES szpital.dbo.specjalnosci(ID),
 	FOREIGN KEY(gabinet, oddzial) REFERENCES szpital.dbo.gabinety(nr_gabinetu, oddzial)
 );
+GO
+
+CREATE FUNCTION dbo.getOddzial(@ID_LEKARZA INT)
+RETURNS INT
+AS 
+BEGIN
+	DECLARE @oddzial_ID INT
+	SELECT @oddzial_ID = oddzial
+	FROM szpital.dbo.lekarze
+	where ID = @ID_LEKARZA
+	RETURN @oddzial_ID
+END
+
+GO
+
 
 CREATE TABLE szpital.dbo.ordynatorzy (
 	ID INT NOT NULL,
@@ -82,6 +99,19 @@ CREATE TABLE szpital.dbo.ordynatorzy (
 	PRIMARY KEY(ID),
 	FOREIGN KEY (ID_lekarza) REFERENCES szpital.dbo.lekarze(ID)
 );
+GO
+/*
+Próbujê zrobiæ funckjê sprawdzaj¹c¹ unikalnoœæ oddzialu lekarza, ¿eby nie by³o 2 szefów jednego oddzialu
+i tak se mi to idzie xd
+*/
+CREATE PROCEDURE dbo.checkOddzialUnique(@ID_wyb_lekarza INT)
+as 
+begin
+	select top 1000 * from szpital.dbo.ordynatorzy
+	where dbo.getOddzial(ID_lekarza) = dbo.getOddzial(@ID_wyb_lekarza)
+end
+
+Go
 
 CREATE TABLE szpital.dbo.rodzinni (
 	ID INT NOT NULL,

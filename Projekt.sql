@@ -72,11 +72,12 @@ CREATE TABLE szpital.dbo.lekarze (
 	
 	PRIMARY KEY(ID),
 	FOREIGN KEY (specjalnosc) REFERENCES szpital.dbo.specjalnosci(ID),
-	FOREIGN KEY(gabinet, oddzial) REFERENCES szpital.dbo.gabinety(nr_gabinetu, oddzial)
+	FOREIGN KEY(gabinet, oddzial) REFERENCES szpital.dbo.gabinety(nr_gabinetu, oddzial),
+	UNIQUE(gabinet, oddzial)
 );
 GO
 
-CREATE FUNCTION dbo.getOddzial(@ID_LEKARZA INT)
+CREATE OR ALTER FUNCTION dbo.getOddzial(@ID_LEKARZA INT)
 RETURNS INT
 AS 
 BEGIN
@@ -104,7 +105,7 @@ GO
 Próbujê zrobiæ funckjê sprawdzaj¹c¹ unikalnoœæ oddzialu lekarza, ¿eby nie by³o 2 szefów jednego oddzialu
 i tak se mi to idzie xd
 */
-CREATE PROCEDURE dbo.checkOddzialUnique(@ID_wyb_lekarza INT)
+CREATE OR ALTER PROCEDURE dbo.checkOddzialUnique(@ID_wyb_lekarza INT)
 as 
 begin
 	select top 1000 * from szpital.dbo.ordynatorzy

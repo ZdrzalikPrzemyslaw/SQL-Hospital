@@ -136,8 +136,7 @@ INSERT INTO szpital.dbo.specjalnosci (ID, min_stawka, opis_specjalnosci) VALUES(
 
 INSERT INTO szpital.dbo.specjalnosci (ID, min_stawka, opis_specjalnosci) VALUES(020, 12300, 'Endokrynologia');
 INSERT INTO szpital.dbo.specjalnosci (ID, min_stawka, opis_specjalnosci) VALUES(021, 06200, 'Endokrynologia ginekologiczna i rozrodczoœæ');
-INSERT INTO szpital.dbo.specjalnosci (ID, min_stawka, opis_specjalnosci) VALUES(022, 03700, 'Endokrynologia i diabetologia dzieciêca');
-INSERT INTO szpital.dbo.specjalnosci (ID, min_stawka, opis_specjalnosci) VALUES(023, 06900, 'Epidemiologia');
+INSERT INTO szpital.dbo.specjalnosci (ID, min_stawka, opis_specjalnosci) VALUES(022, 06900, 'Epidemiologia');
 INSERT INTO szpital.dbo.specjalnosci (ID, min_stawka, opis_specjalnosci) VALUES(023, 07069, 'Farmakologia kliniczna');
 INSERT INTO szpital.dbo.specjalnosci (ID, min_stawka, opis_specjalnosci) VALUES(024, 02300, 'Gastroenterologia');
 INSERT INTO szpital.dbo.specjalnosci (ID, min_stawka, opis_specjalnosci) VALUES(025, 07200, 'Gastroenterologia dzieciêca');
@@ -224,3 +223,14 @@ INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, spe
 /*
 SELECT * from szpital.dbo.lekarze;
 */
+
+INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(001,'20180304', 011);
+INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(002,'20200101', 009);
+INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(003,'20190913', 008);
+INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(004,'20131211', 007);
+INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(005,'20160531', 015);
+INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(006,'20170912', 005);
+INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(007,'20180304', 004);
+INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(008,'20200203', 003);
+
+SELECT * from szpital.dbo.ordynatorzy;

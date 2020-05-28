@@ -94,8 +94,10 @@ GO
 CREATE TABLE szpital.dbo.ordynatorzy (
 	ID INT NOT NULL,
 	data_rozpoczecia_kadencji DATE NOT NULL,
-	data_zakonczenia_kadencji DATE NOT NULL,
+	data_zakonczenia_kadencji DATE,
 	ID_lekarza INT NOT NULL,
+
+	CONSTRAINT check_dates_kadencji CHECK (data_rozpoczecia_kadencji < data_zakonczenia_kadencji or data_zakonczenia_kadencji = NULL),
 	
 	PRIMARY KEY(ID),
 	FOREIGN KEY (ID_lekarza) REFERENCES szpital.dbo.lekarze(ID)

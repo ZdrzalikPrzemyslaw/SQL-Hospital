@@ -299,7 +299,29 @@ INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wi
 INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (014, '37092467584', '2019-10-12 09:00', '2019-11-03 09:09', null);
 INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (015, '37092467584', '2017-06-17 12:00', '2017-07-03 12:12', null);
 INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (015, '37092467584', '2018-08-23 15:00', '2018-09-28 13:00', null);
-
+GO
 /*
 SELECT * FROM szpital.dbo.wizyty;
+*/
+
+INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia, wartosc) VALUES(1001, '2013-07-21', null, 100000);
+INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia, wartosc) VALUES(1002, '2011-03-12', '2018-01-20', 13370);
+INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia, wartosc) VALUES(1003, '2015-07-31', null, 42069);
+INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia, wartosc) VALUES(1004, '2017-04-15', null, 220020);
+INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia, wartosc) VALUES(1005, '2020-04-28', null, 1337420);
+GO
+
+/*
+SELECT * FROM szpital.dbo.umowy;
+*/
+
+INSERT INTO szpital.dbo.dostawcy(ID, umowa, nazwa, kraj) VALUES (101, 1001, 'Szampi Corp', 'PL');
+INSERT INTO szpital.dbo.dostawcy(ID, umowa, nazwa, kraj) VALUES (102, 1002, 'Labrador Company', 'PL');
+INSERT INTO szpital.dbo.dostawcy(ID, umowa, nazwa, kraj) VALUES (103, 1003, 'Bosch', 'DE');
+INSERT INTO szpital.dbo.dostawcy(ID, umowa, nazwa, kraj) VALUES (104, 1004, 'Najlepszy Dostawca', 'PL');
+INSERT INTO szpital.dbo.dostawcy(ID, umowa, nazwa, kraj) VALUES (105, 1005, 'Drogi Dostawca', 'PL');
+GO
+
+/*
+SELECT * FROM szpital.dbo.dostawcy;
 */

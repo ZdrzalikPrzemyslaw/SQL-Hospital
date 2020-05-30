@@ -191,25 +191,25 @@ CREATE TABLE szpital.dbo.karta (
 wyposa¿enie oddzia³u, przedmioty, umowy i dostawy:
 */
 
-CREATE TABLE szpital.dbo.dostawcy (
-	ID INT NOT NULL,
-	nazwa VARCHAR (20) NOT NULL,
-	kraj VARCHAR (3) NOT NULL,
-	ID_umowy INT NOT NULL,
-
-	PRIMARY KEY (ID),
-)
-
 CREATE TABLE szpital.dbo.umowy (
 	ID INT NOT NULL,
 	data_rozpoczecia DATE NOT NULL,
 	data_zakonczenia DATE,
-	ID_dostawcy INT NOT NULL,
-	wartosc INT NOT NULL,
+	wartosc MONEY NOT NULL,
 
 	PRIMARY KEY (ID),
-	FOREIGN KEY (ID_dostawcy) REFERENCES szpital.dbo.dostawcy(ID),
 )
+
+CREATE TABLE szpital.dbo.dostawcy (
+	ID INT NOT NULL,
+	umowa INT NOT NULL,
+	nazwa VARCHAR (20) NOT NULL,
+	kraj VARCHAR (3) NOT NULL,
+
+	PRIMARY KEY (ID),
+	FOREIGN KEY (umowa) REFERENCES szpital.dbo.umowy(ID),
+)
+
 
 CREATE TABLE szpital.dbo.historia_transakcji (
 	ID_umowy INT NOT NULL,

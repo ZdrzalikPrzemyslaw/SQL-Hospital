@@ -304,6 +304,10 @@ GO
 SELECT * FROM szpital.dbo.wizyty;
 */
 
+/* 
+TODO: Rozbi³ bym powi¹zanie dostawców i umów na many to many tak mysle
+*/
+
 INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia, wartosc) VALUES(1001, '2013-07-21', null, 100000);
 INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia, wartosc) VALUES(1002, '2011-03-12', '2018-01-20', 13370);
 INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia, wartosc) VALUES(1003, '2015-07-31', null, 42069);

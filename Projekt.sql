@@ -200,6 +200,10 @@ CREATE TABLE szpital.dbo.umowy (
 	PRIMARY KEY (ID),
 )
 
+/* 
+TODO: Rozbi³ bym powi¹zanie dostawców i umów na many to many tak mysle
+*/
+
 CREATE TABLE szpital.dbo.dostawcy (
 	ID INT NOT NULL,
 	umowa INT NOT NULL,

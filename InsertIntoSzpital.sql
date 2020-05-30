@@ -291,6 +291,14 @@ INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wi
 INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (008, '31031906543', '2014-01-01 08:00', '2015-01-01 09:20', 'Rok, godzina i 20 min w szpitalu, szok');
 INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (009, '35111501293', '2012-09-09 08:00', '2012-09-12 16:15', null);
 INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (010, '38120598236', '2016-10-05 12:00', '2016-10-05 12:40', 'Wizyta kontrolna');
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (010, '38120598236', '2017-10-05 12:00', '2017-10-05 12:40', 'Wizyta kontrolna');
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (011, '38120598236', '2018-10-05 11:00', '2018-10-05 11:35', 'Wizyta kontrolna');
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (012, '38120598236', '2019-10-05 14:00', '2019-10-05 14:55', 'Wizyta kontrolna');
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (013, '38120598236', '2020-10-05 12:00', '2020-10-05 12:35', 'Wizyta kontrolna');
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (005, '99072106392', '2020-03-01 08:00', '2020-04-28 16:30', 'Chory na Tele');
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (014, '37092467584', '2019-10-12 09:00', '2019-11-03 09:09', null);
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (015, '37092467584', '2017-06-17 12:00', '2017-07-03 12:12', null);
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (015, '37092467584', '2018-08-23 15:00', '2018-09-28 13:00', null);
 
 /*
 SELECT * FROM szpital.dbo.wizyty;

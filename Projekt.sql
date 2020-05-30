@@ -58,7 +58,7 @@ CREATE TABLE szpital.dbo.lekarze (
 	ID INT NOT NULL,
 	nazwisko VARCHAR(25) NOT NULL,
 	imie VARCHAR(25) NOT NULL,
-	data_ur DATETIME2 NOT NULL,
+	data_ur DATE NOT NULL,
 	plec VARCHAR(1),
 	telefon VARCHAR(15),
 	specjalnosc INT not null,
@@ -116,8 +116,11 @@ end
 
 Go
 
+/*
+jakies dziwne to z tym nr dyplomu ¿e to jest tutaj a nie po prostu u lekarzy
+*/
 CREATE TABLE szpital.dbo.rodzinni (
-	ID INT NOT NULL,
+	ID INT NOT NULL IDENTITY(1,1),
 	numer_dyplomu VARCHAR(20) NOT NULL,
 	ID_lekarza INT NOT NULL,
 	
@@ -129,7 +132,7 @@ CREATE TABLE szpital.dbo.pacjenci (
 	pesel VARCHAR(11) NOT NULL,
 	nazwisko VARCHAR(25) NOT NULL,
 	imie VARCHAR(25) NOT NULL,
-	data_ur DATETIME2 NOT NULL,
+	data_ur DATE NOT NULL,
 	plec VARCHAR(1),
 	telefon VARCHAR(15),
 	/* 
@@ -155,6 +158,7 @@ CREATE TABLE szpital.dbo.wizyty (
 	czy powinno byc ograniczenie ze to musi byc w czasie kiedy pacjent jest w szpitalu?
 	edit: doda³em datê zakoñczenia i zalecenia
 	*/
+	pacjent VARCHAR(11) NOT NULL,
 	data_wizyty DATETIME2 NOT NULL,
 	data_zakonczenia_wizyty DATETIME2 NULL,
 
@@ -162,11 +166,16 @@ CREATE TABLE szpital.dbo.wizyty (
 
 	PRIMARY KEY (ID),
 	FOREIGN KEY (lekarz) REFERENCES szpital.dbo.lekarze(ID),
+	FOREIGN KEY (pacjent) REFERENCES szpital.dbo.pacjenci(pesel),
 )
 
 /*
 edit: doda³em kartê
 */
+
+
+/*
+EDIT: robiê to i stwierdzam ¿e karta nic nie daje, równie dobrze mo¿emy mieæ w wizycie ID pacjenta
 CREATE TABLE szpital.dbo.karta (
 	ID INT IDENTITY(1,1) NOT NULL, 
 	pacjent VARCHAR(11) NOT NULL,
@@ -176,6 +185,7 @@ CREATE TABLE szpital.dbo.karta (
 	FOREIGN KEY (pacjent) REFERENCES szpital.dbo.pacjenci(pesel),
 	FOREIGN KEY (id_wizyty) REFERENCES szpital.dbo.wizyty(ID),
 )
+*/
 
 /*
 wyposa¿enie oddzia³u, przedmioty, umowy i dostawy:
@@ -201,7 +211,7 @@ CREATE TABLE szpital.dbo.umowy (
 	FOREIGN KEY (ID_dostawcy) REFERENCES szpital.dbo.dostawcy(ID),
 )
 
-CREATE TABLE szpital.dbo.hostoria_transakcji (
+CREATE TABLE szpital.dbo.historia_transakcji (
 	ID_umowy INT NOT NULL,
 	status_umowy VARCHAR(10) NOT NULL, 
 

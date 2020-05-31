@@ -9,6 +9,11 @@ edit: od tego mamy kartê pacjenta z histori¹ jego wizyt :)
 */
 
 
+/*
+TODO: pododawaj constrainty na liczby które powinny byæ wieksze od 0
+np iloœæ czegoœ, zarobki itp.
+*/
+
 CREATE TABLE szpital.dbo.specjalnosci (
 	ID INT NOT NULL,
 	min_stawka MONEY NOT NULL,

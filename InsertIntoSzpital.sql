@@ -371,6 +371,49 @@ INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Taca 
 INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('AP 9 - stolik salowy na leki', 1002, 1008.60);
 INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('MATA ZB-10 ZABEZPIECZAJ¥CA', 1002, 90);
 INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Stolik pod aparaturê medyczn¹ DMG', 1002, 460);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Cortina 1 - dwustronne', 1002, 620);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Waga niemowlêca W P T 6/ 15 D', 1002, 945);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Waga Med. ze wzrostomierzem WPT 60/150 OW', 1002, 1596);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('WZK 2', 1002, 1490);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('AP 8 stolik 2 pó³kowy z metalowymi blatami', 1002, 580);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Mata œlizgowa MW6', 1002, 340);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('L1600 - pionowy', 1002, 280);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('SRM-M/3Siedzisko rzêdowe', 1002, 340);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('LS - wersja nierdzewna Ko na oddzia³y dzieciêce', 1003, 6800);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Stolik pod aparaturê medycz¹ WA', 1003, 520);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Kozetka S1 Economic', 1003, 760);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Biuro Lekarskie OMF', 1003, 1120);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Taboret WOLF', 1003, 138);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Stojak przy³ó¿kowy WYS-2LN z uchwytem trójk¹tnym reg', 1003, 860);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('SCHD-NU2 Porêcze do nauki chodzenia', 1003, 2800);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('SCHD-NU1 Porêcze do nauki chodzenia', 1003, 2500);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('LS £ó¿ko Paliatywne', 1004, 2000);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('£ó¿ko szpitalne rehabilitacyjne elektryczne', 1004, 4000);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Siedziska rzêdowe z oparciem VEGA 3', 1004, 480);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Wózek na poœciel', 1004, 720);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('£s- Pasy ³ó¿kowe do mocowania nóg', 1004, 320);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('£ó¿ko szpitalne LS-2', 1004, 2000);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('£ó¿ko szpitalne LS-3', 1004, 3800);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Taboret Mix', 1005, 310);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Siedziska rzêdowe', 1005, 360);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Stolik do przewijania niemowl¹t sk³adany - boczny', 1005, 820);
+GO
+
+/*
+SELECT * FROM szpital.dbo.przedmioty;
+select * FROM szpital.dbo.oddzialy;
+*/
 
 
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10001, 12);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10001, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10001, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10001, 63);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10002, 1);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10002, 13);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10002, 14);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10002, 20);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10003, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10003, 9);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10003, 6);
 

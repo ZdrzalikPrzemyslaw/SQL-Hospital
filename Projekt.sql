@@ -191,6 +191,10 @@ CREATE TABLE szpital.dbo.karta (
 wyposa¿enie oddzia³u, przedmioty, umowy i dostawy:
 */
 
+/*
+co to tak wgl ma byc wartosc tutaj? ¯e suma wartosci przedmiotów w umowie?
+*/
+
 CREATE TABLE szpital.dbo.umowy (
 	ID INT NOT NULL,
 	data_rozpoczecia DATE NOT NULL,
@@ -229,10 +233,10 @@ CREATE TABLE szpital.dbo.historia_transakcji (
 )
 
 CREATE TABLE szpital.dbo.przedmioty (
-	ID INT NOT NULL,
-	nazwa VARCHAR (20) NOT NULL,
+	ID INT NOT NULL IDENTITY(10001, 1),
+	nazwa VARCHAR (100) NOT NULL,
 	umowa INT NOT NULL,
-	cena_jednostkowa INT NOT NULL,
+	cena_jednostkowa MONEY NOT NULL,
 
 	PRIMARY KEY (ID),
 	FOREIGN KEY (umowa) REFERENCES szpital.dbo.umowy(ID),

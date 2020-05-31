@@ -329,3 +329,48 @@ GO
 /*
 SELECT * FROM szpital.dbo.dostawcy;
 */
+
+INSERT INTO szpital.dbo.historia_transakcji(ID_umowy, status_umowy) VALUES (1001, 'rozpoczeta');
+INSERT INTO szpital.dbo.historia_transakcji(ID_umowy, status_umowy) VALUES (1002, 'zakonczona');
+INSERT INTO szpital.dbo.historia_transakcji(ID_umowy, status_umowy) VALUES (1003, 'rozpoczeta');
+INSERT INTO szpital.dbo.historia_transakcji(ID_umowy, status_umowy) VALUES (1004, 'rozpoczeta');
+INSERT INTO szpital.dbo.historia_transakcji(ID_umowy, status_umowy) VALUES (1005, 'rozpoczeta');
+GO
+/*
+SELECT * FROM szpital.dbo.historia_transakcji;
+*/
+
+/*
+http://www.setpon.pl/wyposazenie-gabinetow-i-szpitali
+*/
+
+
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('B-02 Bok ³ózka szpitalnego - kozetki', 1001, 580);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Lampy Dezynfekcyjne do Sterylizacji Pomieszczeñ', 1001, 369);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('KOZETKA DO TRANSPORTU/MASA¯U Z NAPÊDEM ELEKTRYCZNYM', 1001, 120);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('SRZ3/KO - SIEDZISKO BASENOWE NIERDZEWNE', 1001, 1200);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('S1- Kozetka z elektryzn¹ zmian¹ wysokoœci', 1001, 369);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('BB-01 Basen z r¹czk¹ i wieczkiem', 1001, 28);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Statyw Kroplówki œcienne wysówanej', 1001, 690);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('AS-2 AS STOLIK POD WAGÊ DLA NIEMOWL¥T I APARATURÊ MEDYCZN¥', 1001, 1200);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('AP 10 - Stolik dwupó³kowy', 1001, 1400);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('WYS - dwubiegowy sufitowy', 1001, 380);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('WYS - dwubiegowy', 1001, 280);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Szafa na leki przeszklona', 1001, 1480);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Szafka kartotekowa', 1001, 1180);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Kozetka S1 - sk³adana na œcianê', 1001, 1280);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('SZ 8', 1001, 1200);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('SZ 7', 1001, 1040);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('S1 Guardian - Kozetka stó³ z bokami do zabiegów do badañ dzieci.', 1001, 2400);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('WZ KA-3', 1002, 1420);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('WZ A-2', 1002, 1200);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('WZ- KA1', 1002, 1200);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('WZ A1', 1002, 1200);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Taca Nierdzewna KO pod instrumenty medyczne TN-03', 1002, 89);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Taca Nierdzewna KO pod instrumenty medyczne', 1002, 102);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('AP 9 - stolik salowy na leki', 1002, 1008.60);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('MATA ZB-10 ZABEZPIECZAJ¥CA', 1002, 90);
+INSERT INTO szpital.dbo.przedmioty(nazwa, umowa, cena_jednostkowa) VALUES('Stolik pod aparaturê medyczn¹ DMG', 1002, 460);
+
+
+

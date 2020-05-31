@@ -250,6 +250,8 @@ CREATE TABLE szpital.dbo.wyposazenie (
 	PRIMARY KEY (ID_oddzialu, ID_przedmiotu),
 	FOREIGN KEY (ID_oddzialu) REFERENCES szpital.dbo.oddzialy(ID),
 	FOREIGN KEY (ID_przedmiotu) REFERENCES szpital.dbo.przedmioty(ID),
+	CONSTRAINT liczba_wieksza_od_0
+	CHECK (liczba > 0),
 )
 
 

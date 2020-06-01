@@ -486,7 +486,6 @@ INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (
 INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10017, 2);
 INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10017, 2);
 
-
 INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10018, 11);
 INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10018, 12);
 INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10018, 88);
@@ -494,13 +493,457 @@ INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (
 INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10018, 12);
 INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10018, 1);
 
-INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10010, 4);
-INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10010, 5);
-INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10010, 5);
-INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10010, 6);
-INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10010, 7);
-INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10010, 5);
-INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10010, 8);
-INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10010, 12);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10019, 1);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10019, 1);
 
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10020, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10020, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10020, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10020, 9);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10020, 1);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10020, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10020, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10020, 8);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10021, 1);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10021, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10021, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10021, 5);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10022, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10022, 1);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10022, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10022, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10022, 8);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10023, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10023, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10023, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10023, 1);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10023, 1);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10024, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10024, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10024, 1);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10024, 3);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10025, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10025, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10025, 1);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10025, 7);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10026, 9);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10026, 7);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10027, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10027, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10027, 9);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10027, 1);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10027, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10027, 3);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10028, 10);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10028, 10);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10028, 10);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10028, 10);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10029, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10029, 8);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10030, 1);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10030, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10030, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10030, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10030, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10030, 1);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10030, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10030, 3);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10031, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10031, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10031, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10031, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10031, 2);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10032, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10032, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10032, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10032, 2);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10033, 12);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10033, 13);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10033, 14);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10033, 15);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10034, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10034, 16);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10034, 6);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10035, 1);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10036, 1);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10037, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10037, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10037, 3);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10038, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10038, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10038, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10038, 9);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10039, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10039, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10039, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10039, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10039, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10039, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10039, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10039, 3);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10040, 9);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10040, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10040, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10040, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10040, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10040, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10040, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10040, 7);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10041, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10041, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10041, 1);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10041, 5);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10042, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10042, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10042, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10042, 8);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10043, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10043, 1);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10043, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10043, 2);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10044, 12);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10044, 13);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10044, 14);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10044, 15);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10045, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10045, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10045, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10045, 2);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10046, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10046, 3);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10047, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10047, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10047, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10047, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10047, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10047, 1);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10048, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10048, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10048, 6);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10049, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10049, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10049, 2);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10050, 1);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10050, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10050, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10050, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10050, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10050, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10050, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10050, 8);
+
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10051, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10051, 7);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10052, 9);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10052, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10052, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10052, 1);
+
+/*
+SELECT * FROM szpital.dbo.wyposazenie
+*/
+
+/*
+WCALE PRZEZ PRZYPADEK ZA DUZO NIE DOPISA£EM
+JAK KIEDYS BEDZIEMY POTRZEBOWAC WIECEJ TO ODKOMENTOWAC
+:(
+*/
+/*
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10053, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10053, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10053, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10053, 9);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10054, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10054, 4);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10055, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10055, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10055, 8);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10056, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10056, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10056, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10056, 9);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10057, 9);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10057, 8);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10058, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10058, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10058, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10058, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10058, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10058, 2);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10059, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10059, 8);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10060, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10060, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10060, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10060, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10060, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10060, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10060, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10060, 1);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10061, 9);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10061, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10061, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10061, 6);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10062, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10062, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10062, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10062, 1);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10063, 7);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10064, 8);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10065, 1);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10066, 2);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10067, 8);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10068, 13);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10069, 12);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10070, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10070, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10070, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10070, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10070, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10070, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10070, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10070, 1);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10071, 11);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10072, 9);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10072, 8);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10073, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10073, 1);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10074, 33);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10074, 22);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10075, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10075, 2);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10076, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10076, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10076, 6);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10077, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10077, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10077, 3);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10078, 98);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10078, 99);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10079, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10079, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10079, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10079, 5);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10080, 9);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10080, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10080, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10080, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10080, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10080, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10080, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10080, 2);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10081, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10081, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10081, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10081, 3);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10081, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10081, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10081, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10081, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10081, 2);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10082, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10082, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10082, 3);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10083, 11);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10083, 14);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10084, 5);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10085, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10085, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10085, 4);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10086, 9);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10086, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10086, 2);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10087, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10087, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10087, 2);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10088, 1);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10089, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10089, 3);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10080, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10080, 9);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10081, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10081, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10081, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10081, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10081, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10081, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10081, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10081, 9);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10082, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10082, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10082, 8);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10083, 13);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10083, 15);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10083, 16);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10083, 18);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10084, 41);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10084, 51);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10084, 61);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10084, 71);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10085, 24);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10085, 25);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10085, 26);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10086, 43);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10086, 35);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10086, 63);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10086, 37);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10087, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10087, 14);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10087, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10087, 91);
+
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10088, 1);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10088, 1);
+
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10089, 9);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10089, 9);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10090, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10090, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10090, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10090, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10090, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10090, 9);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10090, 9);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10090, 7);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10091, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10091, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10091, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10091, 3);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10092, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10092, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10092, 7);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10093, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10093, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10093, 1);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10094, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10094, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10094, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10094, 9);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10095, 24);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10095, 25);;
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10096, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10096, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10096, 1);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10097, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10097, 2);
+
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10098, 7);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10098, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10098, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10098, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10098, 3);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10099, 34);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10100, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10100, 5);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10100, 6);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10100, 2);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (5, 10100, 8);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10100, 9);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10100, 9);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10100, 7);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10101, 2);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10102, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (2, 10102, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (3, 10102, 5);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (1, 10103, 9);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (4, 10103, 9);
+
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (6, 10104, 4);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (7, 10104, 3);
+INSERT INTO szpital.dbo.wyposazenie(ID_oddzialu, ID_przedmiotu, liczba) VALUES (8, 10104, 2);
+
+*/
 

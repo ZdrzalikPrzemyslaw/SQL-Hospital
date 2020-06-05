@@ -1,4 +1,4 @@
-# SQL_Project
+# SQL-Hospital
 
 Baza danych dla szpitala
 

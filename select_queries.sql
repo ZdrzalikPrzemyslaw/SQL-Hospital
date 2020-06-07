@@ -107,5 +107,13 @@ select oddzial, avg(zarobki) as avg_zarobki into #tmp_oddzial_zarobki
 SELECT imie, nazwisko, zarobki, specjalnosc from szpital.dbo.lekarze l, #tmp_oddzial_zarobki o
 where l.oddzial = o.oddzial
 and l.zarobki < o.avg_zarobki
-drop table if exists #tmp_oddzial_zarobki
+drop table if exists #tmp_oddzial_zarobki 
 go
+
+select imie, nazwisko, zarobki, specjalnosc from szpital.dbo.lekarze l
+where l.zarobki < (select avg(zarobki) from szpital.dbo.lekarze l2 where oddzial = l.oddzial group by oddzial)
+
+--14
+
+select imie, nazwisko, specjalnosc, oddzial from szpital.dbo.lekarze l
+where l.specjalnosc = 

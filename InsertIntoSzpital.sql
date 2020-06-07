@@ -235,7 +235,7 @@ INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) V
 INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(005, '20160531', 015);
 INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(006, '20170912', 005);
 INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(007, '20180304', 004);
-INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(008, '20200203', 003);
+INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(008, '20120203', 017);
 GO
 /*
 SELECT * from szpital.dbo.ordynatorzy;

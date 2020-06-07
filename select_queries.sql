@@ -55,3 +55,57 @@ WHERE r.oddzial =
 (SELECT TOP 1 oddzial FROM szpital.dbo.lekarze
 GROUP BY oddzial
 ORDER BY AVG(zarobki) DESC);
+
+--10
+
+SELECT data_rozpoczecia_kadencji, imie, nazwisko from szpital.dbo.ordynatorzy o, szpital.dbo.lekarze l
+where l.ID = o.ID_lekarza
+and year(o.data_rozpoczecia_kadencji) in 
+(
+	SELECT TOP 1 date_year as i from 
+	(
+		select datepart(Year, data_budowy) as 'date_year'
+		, count(*) as 'numof'
+		from szpital.dbo.budynki
+		group by
+			datepart(Year, data_budowy)
+	) 
+	as years
+	order by years.numof desc
+)
+
+--11
+SELECT imie, nazwisko from szpital.dbo.lekarze l
+where l.id in 
+(
+	SELECT TOP 3 id from 
+	(
+		select id, zarobki 
+		from szpital.dbo.lekarze
+		group by
+			id, zarobki
+	)
+	as zarobki_lekarzy
+	order by zarobki_lekarzy.zarobki desc
+)
+GO
+
+--12
+
+SELECT imie, nazwisko, zarobki * 12 as roczne_zarobki from szpital.dbo.lekarze;
+GO
+
+--13
+
+/*
+na pewno mozna ladniej
+*/
+drop table if exists #tmp_oddzial_zarobki
+select oddzial, avg(zarobki) as avg_zarobki into #tmp_oddzial_zarobki
+	from szpital.dbo.lekarze 
+		group by oddzial
+SELECT imie, nazwisko, zarobki, specjalnosc from szpital.dbo.lekarze l, #tmp_oddzial_zarobki o
+where l.oddzial = o.oddzial
+and l.zarobki < o.avg_zarobki
+drop table if exists #tmp_oddzial_zarobki
+go

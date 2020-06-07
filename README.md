@@ -37,8 +37,8 @@ edit: ^ Warto by dodać w takim razie kilku lekarzy bez nr telefonu, bo atkualni
 10.	Podaj imiona i nazwiska oraz daty rozpoczęcia kadencji ordynatorów, którzy rozpoczęli kadencję w roku, w którym wybudowano najwięcej budynków.
 edit: ^ zmienic date rozpoaczecia jednego z ordynatorów na 2012 w takim razie
 11.	Wyświetl nazwiska oraz imiona trzech najlepiej zarabiających lekarzy.
-12.	Podaj nazwiska i roczną płacę lekarzy wraz z odpowiednim aliasem.
-13.	Podaj nazwiska, specjalności i płace lekarzy, którzy zarabiają poniżej średniej w swoim oddziale.
+12.	Podaj imiona, nazwiska i roczną płacę lekarzy wraz z odpowiednim aliasem.
+13.	Podaj imiona, nazwiska, specjalności i płace lekarzy, którzy zarabiają poniżej średniej w swoim oddziale.
 14.	Podaj ilu lekarzy pracuje w każdym oddziale o specjalności chirurg.
 edit: ^mało lekarzy mamy na takie zapytanie, wydaje mi się że się nawet u żadnego specjalność nie powtarza
 15.	Podaj naziwska i id ordynatorów oraz ile wynosi różnica między ich zarobkami a średnią płacą w całym szpitalu.

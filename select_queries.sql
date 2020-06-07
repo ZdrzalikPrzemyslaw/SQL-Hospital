@@ -203,3 +203,25 @@ and (w.data_zakonczenia_wizyty > GETDATE() or w.data_zakonczenia_wizyty is null)
 
 --21
 
+-- chyba nie wiem do konca jak ma to dzialaæ
+
+--22
+
+--zrobi³em po prostu lekarzy którzy pracuj¹ w budynku w którym s¹ najmniejsze zarobki
+
+SELECT l.nazwisko, l.imie, l.telefon, l.zarobki, l.oddzial, l.gabinet from szpital.dbo.lekarze l, szpital.dbo.oddzialy o
+where o.ID = l.oddzial
+and o.budynek in
+(
+	SELECT top 1 ID from
+	(
+		select avg(zarobki) as avg_zarobki,
+		b.ID
+		from szpital.dbo.lekarze l, szpital.dbo.budynki b, szpital.dbo.oddzialy o
+		where o.ID = l.oddzial
+		and o.budynek = b.ID
+		group by oddzial, b.ID
+	)
+	as zarobki
+	order by zarobki.avg_zarobki
+)

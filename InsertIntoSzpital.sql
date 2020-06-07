@@ -47,6 +47,7 @@ INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (102, 3);
 INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (103, 3);
 INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (104, 3);
 INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (105, 3);
+INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (112, 3);
 INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (201, 3);
 INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (202, 3);
 INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (203, 3);
@@ -69,6 +70,7 @@ INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (102, 5);
 INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (103, 5);
 INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (104, 5);
 INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (105, 5);
+INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (111, 5);
 INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (201, 5);
 INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (202, 5);
 INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (203, 5);
@@ -102,6 +104,7 @@ INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (102, 8);
 INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (103, 8);
 INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (104, 8);
 INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (105, 8);
+INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (112, 8);
 INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (201, 8);
 INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (202, 8);
 INSERT INTO szpital.dbo.gabinety (nr_gabinetu, oddzial) VALUES (203, 8);
@@ -218,6 +221,8 @@ INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, spe
 INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(015, 'Marczyk', 'Aleksandra', '19990212', 'K', '+4842807795120', 42, 14567, 5, 102);
 INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(016, 'Zawiœlak', 'Ma³gorzata', '20000414', 'K', '+4842312598027', 20, 21370, 3, 104);
 INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(017, 'Szymañska', 'Julia', '19990508', 'K', '+4842380167923', 59, 38071, 8, 105);
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(018, 'Ma³ysz', 'Adam', '19990312', 'M', null, 44, 14567, 5, 111);
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(019, 'Anna', 'Ma³gorzata', '20010411', 'K', null, 44, 21370, 3, 112);
 GO
 /*
 TOOD:
@@ -229,13 +234,17 @@ SELECT * from szpital.dbo.lekarze;
 */
 
 INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(001, '20180304', 011);
-INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(002, '20200101', 009);
+INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(002, '20120101', 009);
 INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(003, '20190913', 008);
 INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(004, '20131211', 007);
 INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(005, '20160531', 015);
 INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(006, '20170912', 005);
 INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(007, '20180304', 004);
+<<<<<<< HEAD
 INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(008, '20120203', 017);
+=======
+INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) VALUES(008, '20120203', 003);
+>>>>>>> 56eb41eb6c2daf7abde5a118b7997f3ea035d53b
 GO
 /*
 SELECT * from szpital.dbo.ordynatorzy;
@@ -299,6 +308,18 @@ INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wi
 INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (014, '37092467584', '2019-10-12 09:00', '2019-11-03 09:09', null);
 INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (015, '37092467584', '2017-06-17 12:00', '2017-07-03 12:12', null);
 INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (015, '37092467584', '2018-08-23 15:00', '2018-09-28 13:00', null);
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (014, '37092467584', '2019-10-12 09:00', '2019-11-03 09:09', null);
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (015, '37092467584', '2017-06-17 12:00', '2017-07-03 12:12', null);
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (015, '37092467584', '2018-08-23 15:00', '2018-09-28 13:00', null);
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (014, '37092467584', '2019-08-12 09:00', '2019-12-03 09:09', 'nieuleczalnie chory');
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (015, '38120598236', '2017-02-17 12:00', '2017-10-03 12:12', 'ciê¿ki przypadek');
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (015, '37092467584', '2018-01-23 15:00', '2018-11-28 13:00', 'programuje w assemblerze');
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (014, '38120598236', '2019-09-12 09:00', '2019-12-03 09:09', 'nie u¿ywa œredników');
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (015, '37092467584', '2017-04-17 12:00', '2017-09-03 12:12', 'nie formatuje kodu');
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (015, '37092467584', '2018-01-23 15:00', '2018-10-28 13:00', 'jego komentarze do commitów s¹ chore');
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (014, '38120598236', '2019-02-12 09:00', '2019-12-03 09:09', 'notorycznie korzysta ze stackoverflow');
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (015, '40122409876', '2013-10-17 12:00', '2014-07-03 12:12', 'programuje po godzinach');
+INSERT INTO szpital.dbo.wizyty(lekarz, pacjent, data_wizyty, data_zakonczenia_wizyty, zalecenia) VALUES (015, '40122409876', '2011-01-23 15:00', '2013-09-28 13:00', 'temu ju¿ nic nie pomo¿e');
 GO
 /*
 SELECT * FROM szpital.dbo.wizyty;

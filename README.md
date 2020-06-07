@@ -6,7 +6,7 @@ Zalozenia:
 
 1. Pacjenci są rejestrowani na określony okres, w określonym oddziale. 
 2. W szpitalu pracują lekarze różnych specjalności
-3. Pacjent jest pod opieką (ma przypisanego) lekarza rodzinnego (lekarz rodzinny to jedna ze specjalności) EDIT: zrobił bym że lekarz rodzinny nie jest specjalnością, tylko po prostu część lekarzy jest 
+3. Pacjent jest pod opieką (ma przypisanego) lekarza rodzinnego.
 Też lekarzami rodzinnymi
 4. Pacjent może zapisać się na wizytę do dowolnego lekarza na określony dzień i godzinę
 5. W ramach każdej specjalności lekarz pacjent ma założoną kartę, na której zapisuje się przebieg leczenia: daty wizyt i zalecenia.

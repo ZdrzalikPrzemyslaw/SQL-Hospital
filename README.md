@@ -39,11 +39,11 @@ edit: ^ zmienic date rozpoaczecia jednego z ordynatorów na 2012 w takim razie
 11.	Wyświetl nazwiska oraz imiona trzech najlepiej zarabiających lekarzy.
 12.	Podaj imiona, nazwiska i roczną płacę lekarzy wraz z odpowiednim aliasem.
 13.	Podaj imiona, nazwiska, specjalności i płace lekarzy, którzy zarabiają poniżej średniej w swoim oddziale.
-14.	Podaj ilu lekarzy pracuje w każdym oddziale o specjalności chirurg.
+14.	Podaj ilu lekarzy pracuje w każdym oddziale o specjalności Mikrobiologia lekarska.
 edit: ^mało lekarzy mamy na takie zapytanie, wydaje mi się że się nawet u żadnego specjalność nie powtarza
 15.	Podaj naziwska i id ordynatorów oraz ile wynosi różnica między ich zarobkami a średnią płacą w całym szpitalu.
-16.	Wyświetl nazwiska lekarzy, którzy miesięcznie zarabiają pomiędzy 3000 a 5000 PLN.
-17.	Podaj ID budynku, w którym nie zatrudnia się chirurgów.
+16.	Wyświetl nazwiska lekarzy, którzy miesięcznie zarabiają pomiędzy 3000 a 9000 PLN.
+17.	Podaj ID budynku, w którym nie zatrudnia się lekarzy o specjalnosci Mikrobiologia lekarska.
 edit: ^ to samo co w 14
 18.	Podaj nazwiska pacjentów, których lekarzem rodzinnym jest Jan Kowalski
 19.	Wyświetl nazwiska pacjentów, którzy przebywali w szpitalu w pierwszym tygodniu maja dłużej niż 1 dzień.

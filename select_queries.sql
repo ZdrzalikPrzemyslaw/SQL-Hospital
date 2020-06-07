@@ -97,23 +97,109 @@ GO
 
 --13
 
-/*
-na pewno mozna ladniej
-*/
-drop table if exists #tmp_oddzial_zarobki
-select oddzial, avg(zarobki) as avg_zarobki into #tmp_oddzial_zarobki
-	from szpital.dbo.lekarze 
-		group by oddzial
-SELECT imie, nazwisko, zarobki, specjalnosc from szpital.dbo.lekarze l, #tmp_oddzial_zarobki o
-where l.oddzial = o.oddzial
-and l.zarobki < o.avg_zarobki
-drop table if exists #tmp_oddzial_zarobki 
-go
-
 select imie, nazwisko, zarobki, specjalnosc from szpital.dbo.lekarze l
 where l.zarobki < (select avg(zarobki) from szpital.dbo.lekarze l2 where oddzial = l.oddzial group by oddzial)
 
 --14
 
-select imie, nazwisko, specjalnosc, oddzial from szpital.dbo.lekarze l
-where l.specjalnosc = 
+select oddzial, count(*) as liczba_lekarzy_o_specjalnosci from szpital.dbo.lekarze l
+where l.specjalnosc in
+(
+	SELECT TOP 1 ID as i from 
+	(
+		select id, opis_specjalnosci
+		from szpital.dbo.specjalnosci
+		where opis_specjalnosci = 'Mikrobiologia lekarska'
+		group by
+			opis_specjalnosci, id
+	) 
+	as specjalnosci
+)
+group by oddzial
+
+--15
+
+select nazwisko, o.id, l.zarobki - b.avg_zarobki as roznica_od_sredniej_zarobkow from 
+szpital.dbo.ordynatorzy o, szpital.dbo.lekarze l, (select avg(zarobki) as "avg_zarobki" from szpital.dbo.lekarze) b
+where o.ID_lekarza = l.ID
+GO
+
+--16
+
+select nazwisko from szpital.dbo.lekarze l
+where l.zarobki > 3000
+and l.zarobki < 9000
+GO
+
+--17
+
+select id from szpital.dbo.budynki
+where id not in (
+	select budynek from szpital.dbo.oddzialy
+	where id in
+	(
+		select oddzial from szpital.dbo.lekarze l
+		where l.specjalnosc in
+		(
+			SELECT TOP 1 ID as i from 
+			(
+				select id, opis_specjalnosci
+				from szpital.dbo.specjalnosci
+				where opis_specjalnosci = 'Mikrobiologia lekarska'
+				group by
+					opis_specjalnosci, id
+			) 
+			as specjalnosci
+		)
+		group by oddzial
+	)
+)
+
+--18
+
+select nazwisko from szpital.dbo.pacjenci p
+where p.lekarz_rodzinny in
+(
+	select ID from szpital.dbo.lekarze l
+	where 
+	l.imie = 'Witold'
+	and l.nazwisko = 'Pietrzak'
+	group by id
+)
+GO
+
+--19
+/*
+ale cyrk xD
+takie spaghetti ¿e ohoho z³oty
+a najlepsze ¿e nie wiem czy dziala xD
+ale mam nadziejê ¿e dziala
+*/
+
+select * from szpital.dbo.wizyty w
+where 
+(datepart(wk, w.data_wizyty) <= datepart(wk, concat(YEAR(w.data_wizyty),'-05-01')) 
+and 
+datepart(wk, w.data_zakonczenia_wizyty) >= datepart(wk, concat(YEAR(w.data_wizyty),'-05-01'))
+and datepart(month, w.data_zakonczenia_wizyty) >= 5)
+or 
+(datepart(year, w.data_zakonczenia_wizyty) - datepart(year, w.data_wizyty) > 0 
+and
+(datepart(wk, w.data_zakonczenia_wizyty) > datepart(wk, concat(YEAR(w.data_wizyty),'-05-01'))))
+
+
+--20
+
+select p.imie as imie_pacjenta, p.nazwisko as nazwisko_pacjenta,
+l.imie as imie_lekarza_rodzinnego, l.nazwisko as nazwisko_lekarza_rodzinnego,
+w.zalecenia, w.data_wizyty, w.data_zakonczenia_wizyty
+from szpital.dbo.pacjenci p,szpital.dbo.lekarze l, szpital.dbo.rodzinni r, szpital.dbo.wizyty w
+where p.plec = 'K'
+and p.lekarz_rodzinny = r.ID
+and l.ID = r.ID_lekarza
+and w.pacjent = p.pesel
+and w.data_wizyty < GETDATE()
+and (w.data_zakonczenia_wizyty > GETDATE() or w.data_zakonczenia_wizyty is null)
+
+--21
+

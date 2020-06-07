@@ -225,3 +225,45 @@ and o.budynek in
 	as zarobki
 	order by zarobki.avg_zarobki
 )
+
+--23 - 26
+--skip
+
+--26
+-- Pratkycznie powtórka query nr 14, usunac?
+
+select l.imie, l.nazwisko, l.gabinet, l.oddzial, o.opis_oddzialu, b.ID   from szpital.dbo.lekarze l, szpital.dbo.oddzialy o, szpital.dbo.budynki b
+where l.oddzial = o.ID 
+and o.budynek = b.ID
+and l.specjalnosc in
+(
+	SELECT TOP 1 ID as i from 
+	(
+		select id, opis_specjalnosci
+		from szpital.dbo.specjalnosci
+		where opis_specjalnosci = 'Mikrobiologia lekarska'
+		group by
+			opis_specjalnosci, id
+	) 
+	as specjalnosci
+)
+
+--27
+
+select l.imie, l.nazwisko, l.gabinet, l.oddzial from szpital.dbo.lekarze l
+where l.ID in
+(
+	select lekarz
+	from szpital.dbo.wizyty
+	where pacjent = '99072106392'
+	group by lekarz
+)
+
+--28
+
+-- skipuje, dodaæ lekarzy tej samej specki do jednego dzialu
+
+--29
+
+-- jestem prawie pewien ¿e u nas cena przedmiotów nie zale¿y od umowy
+

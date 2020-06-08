@@ -1,6 +1,9 @@
 # SQL-Hospital
 
 Baza danych dla szpitala
+Diagram:
+
+![diagram](https://github.com/ZdrzalikPrzemyslaw/SQL-Hospital/blob/master/.github/Database_diagram.png)
 
 Zalozenia:
 

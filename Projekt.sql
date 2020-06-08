@@ -67,10 +67,6 @@ CREATE TABLE szpital.dbo.lekarze (
 	plec VARCHAR(1),
 	telefon VARCHAR(15),
 	specjalnosc INT not null,
-	/*
-	edit: Zostawiam Tobie tego constrainta
-	edit 28.05.2020: Próbowa³em zrobiæ podobny constraint dla tabeli ordynatorów i mi nie zbyt idzie wiec narazie zostawiam
-	*/
 	zarobki MONEY NOT NULL,
 	oddzial INT Not null,
 	gabinet INT not null, 
@@ -80,7 +76,10 @@ CREATE TABLE szpital.dbo.lekarze (
 	FOREIGN KEY (specjalnosc) REFERENCES szpital.dbo.specjalnosci(ID),
 	FOREIGN KEY(gabinet, oddzial) REFERENCES szpital.dbo.gabinety(nr_gabinetu, oddzial),
 	foreign key(szef) references szpital.dbo.lekarze(ID),
-	UNIQUE(gabinet, oddzial)
+	UNIQUE(gabinet, oddzial),
+	constraint zarobki_wieksze_od_0 check (zarobki > 0),
+	CONSTRAINT plecConstraintLekarz
+	CHECK (plec like '[K|M]')
 );
 GO
 
@@ -128,7 +127,6 @@ jakies dziwne to z tym nr dyplomu ¿e to jest tutaj a nie po prostu u lekarzy
 */
 CREATE TABLE szpital.dbo.rodzinni (
 	ID INT NOT NULL IDENTITY(1,1),
-	numer_dyplomu VARCHAR(20) NOT NULL,
 	ID_lekarza INT NOT NULL,
 	
 	PRIMARY KEY(ID),
@@ -202,27 +200,32 @@ wyposa¿enie oddzia³u, przedmioty, umowy i dostawy:
 co to tak wgl ma byc wartosc tutaj? ¯e suma wartosci przedmiotów w umowie?
 */
 
-CREATE TABLE szpital.dbo.umowy (
-	ID INT NOT NULL,
-	data_rozpoczecia DATE NOT NULL,
-	data_zakonczenia DATE,
-
-	PRIMARY KEY (ID),
-)
-
 /* 
 TODO: Rozbi³ bym powi¹zanie dostawców i umów na many to many tak mysle
 */
 
 CREATE TABLE szpital.dbo.dostawcy (
 	ID INT NOT NULL,
-	umowa INT NOT NULL,
 	nazwa VARCHAR (20) NOT NULL,
 	kraj VARCHAR (3) NOT NULL,
 
 	PRIMARY KEY (ID),
-	FOREIGN KEY (umowa) REFERENCES szpital.dbo.umowy(ID),
 )
+
+GO
+
+CREATE TABLE szpital.dbo.umowy (
+	ID INT NOT NULL,
+	data_rozpoczecia DATE NOT NULL,
+	data_zakonczenia DATE,
+	dostawca int not null,
+
+	CONSTRAINT check_dates_umowa CHECK (data_rozpoczecia < data_zakonczenia),
+
+	PRIMARY KEY (ID),
+	FOREIGN KEY (dostawca) REFERENCES szpital.dbo.dostawcy(ID),
+)
+
 
 
 CREATE TABLE szpital.dbo.historia_transakcji (

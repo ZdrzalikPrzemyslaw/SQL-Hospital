@@ -238,7 +238,7 @@ INNER JOIN szpital.dbo.wyposazenie l ON l.ID_oddzialu=szpital.dbo.oddzialy.ID
 INNER JOIN szpital.dbo.przedmioty ON l.ID_przedmiotu=szpital.dbo.przedmioty.ID
 WHERE nazwa = 'Lampy Dezynfekcyjne do Sterylizacji Pomieszczeñ' AND liczba > 0.1 * 
 (SELECT SUM(liczba) FROM szpital.dbo.wyposazenie r WHERE l.ID_oddzialu = r.ID_oddzialu GROUP BY ID_oddzialu);
-
+GO
 --25
 -- Pratkycznie powtórka query nr 14, usunac?
 
@@ -257,6 +257,7 @@ and l.specjalnosc in
 	) 
 	as specjalnosci
 )
+GO
 
 --26
 
@@ -268,13 +269,14 @@ where l.ID in
 	where pacjent = '99072106392'
 	group by lekarz
 )
+GO
 
 --27
 
 select * from szpital.dbo.umowy u
 where u.data_zakonczenia is not null
 and DATEDIFF(DAY, u.data_rozpoczecia, u.data_zakonczenia) > 30
-
+Go
 --28
 
 Select w.ID, w.opis_oddzialu from szpital.dbo.oddzialy w
@@ -290,6 +292,7 @@ where w.ID in
 	as wydatki
 	order by suma_wydatkow desc
 )
+GO
 
 --29
 
@@ -325,13 +328,13 @@ where l.specjalnosc in
 	as specjalnosci
 )
 group by oddzial
-
+Go
 --30
 
 select top (1) DATENAME(DW, w.data_wizyty) as Najpopularniejszy_Dzien from szpital.dbo.wizyty w
 group by DATENAME(DW, w.data_wizyty)
 order by count(*) desc
-
+GO
 --31
 
 WITH Szpital_Hierarchia AS 
@@ -349,3 +352,9 @@ WITH Szpital_Hierarchia AS
 )
 SELECT * FROM Szpital_Hierarchia;
 GO
+
+--32 - wszyscy lekarze którzy zarabiaj¹ mniej ni¿ minimalna stawka.
+
+Select l.imie, l.nazwisko, l.zarobki, l.specjalnosc, s.min_stawka from szpital.dbo.lekarze l, szpital.dbo.specjalnosci s
+where s.ID = l.specjalnosc
+and l.zarobki < s.min_stawka

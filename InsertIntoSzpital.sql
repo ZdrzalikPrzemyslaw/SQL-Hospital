@@ -250,12 +250,12 @@ SELECT * from szpital.dbo.ordynatorzy;
 /*
 Jesli zmienimi miejsce nr dyplomu to po prostu przeniesc do odpowiednich lekarzy
 */
-INSERT INTO szpital.dbo.rodzinni(numer_dyplomu, ID_lekarza) VALUES('1110/163/96', 017);
-INSERT INTO szpital.dbo.rodzinni(numer_dyplomu, ID_lekarza) VALUES('L16318/33324/98', 014);
-INSERT INTO szpital.dbo.rodzinni(numer_dyplomu, ID_lekarza) VALUES('2043/SZ/UM/2000', 011);
-INSERT INTO szpital.dbo.rodzinni(numer_dyplomu, ID_lekarza) VALUES('4/728/2012', 003);
-INSERT INTO szpital.dbo.rodzinni(numer_dyplomu, ID_lekarza) VALUES('15/2009/V', 006);
-INSERT INTO szpital.dbo.rodzinni(numer_dyplomu, ID_lekarza) VALUES('1546278', 009);
+INSERT INTO szpital.dbo.rodzinni(ID_lekarza) VALUES(017);
+INSERT INTO szpital.dbo.rodzinni(ID_lekarza) VALUES(014);
+INSERT INTO szpital.dbo.rodzinni(ID_lekarza) VALUES(011);
+INSERT INTO szpital.dbo.rodzinni(ID_lekarza) VALUES(003);
+INSERT INTO szpital.dbo.rodzinni(ID_lekarza) VALUES(006);
+INSERT INTO szpital.dbo.rodzinni(ID_lekarza) VALUES(009);
 GO
 /*
 SELECT * FROM szpital.dbo.lekarze WHERE ID IN
@@ -328,27 +328,29 @@ SELECT * FROM szpital.dbo.wizyty;
 TODO: Rozbi³ bym powi¹zanie dostawców i umów na many to many tak mysle
 */
 
-INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia) VALUES(1001, '2013-07-21', null);
-INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia) VALUES(1002, '2011-03-12', '2018-01-20');
-INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia) VALUES(1003, '2015-07-31', null);
-INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia) VALUES(1004, '2017-04-15', null);
-INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia) VALUES(1005, '2020-04-28', null);
+
+INSERT INTO szpital.dbo.dostawcy(ID, nazwa, kraj) VALUES (101,  'Szampi Corp', 'PL');
+INSERT INTO szpital.dbo.dostawcy(ID, nazwa, kraj) VALUES (102,  'Labrador Company', 'PL');
+INSERT INTO szpital.dbo.dostawcy(ID, nazwa, kraj) VALUES (103,  'Bosch', 'DE');
+INSERT INTO szpital.dbo.dostawcy(ID, nazwa, kraj) VALUES (104,  'Najlepszy Dostawca', 'PL');
+INSERT INTO szpital.dbo.dostawcy(ID, nazwa, kraj) VALUES (105,  'Drogi Dostawca', 'PL');
+GO
+
+/*
+SELECT * FROM szpital.dbo.dostawcy;
+*/
+
+INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia, dostawca) VALUES(1001, '2013-07-21', null, 101);
+INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia, dostawca) VALUES(1002, '2011-03-12', '2018-01-20', 102);
+INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia, dostawca) VALUES(1003, '2015-07-31', null, 103);
+INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia, dostawca) VALUES(1004, '2017-04-15', null, 104);
+INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia, dostawca) VALUES(1005, '2020-04-28', null, 105);
 GO
 
 /*
 SELECT * FROM szpital.dbo.umowy;
 */
 
-INSERT INTO szpital.dbo.dostawcy(ID, umowa, nazwa, kraj) VALUES (101, 1001, 'Szampi Corp', 'PL');
-INSERT INTO szpital.dbo.dostawcy(ID, umowa, nazwa, kraj) VALUES (102, 1002, 'Labrador Company', 'PL');
-INSERT INTO szpital.dbo.dostawcy(ID, umowa, nazwa, kraj) VALUES (103, 1003, 'Bosch', 'DE');
-INSERT INTO szpital.dbo.dostawcy(ID, umowa, nazwa, kraj) VALUES (104, 1004, 'Najlepszy Dostawca', 'PL');
-INSERT INTO szpital.dbo.dostawcy(ID, umowa, nazwa, kraj) VALUES (105, 1005, 'Drogi Dostawca', 'PL');
-GO
-
-/*
-SELECT * FROM szpital.dbo.dostawcy;
-*/
 
 INSERT INTO szpital.dbo.historia_transakcji(ID_umowy, status_umowy) VALUES (1001, 'rozpoczeta');
 INSERT INTO szpital.dbo.historia_transakcji(ID_umowy, status_umowy) VALUES (1002, 'zakonczona');

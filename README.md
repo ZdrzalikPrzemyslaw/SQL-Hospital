@@ -55,10 +55,8 @@ edit: ^ dodać więcej wizyt i pacjentów
 23.	Wyświetl nazwę oddziału, w którym Lampy Dezynfekcyjne do Sterylizacji Pomieszczeń stanowią mniej niż 10% całego wyposażenia.
 24.	Dla jakich budynków dostarczają dostawcy?
 25.	Wyszukaj wszystkich lekarzy wraz z przypisanym im gabinetem, oddziałem, budynkiem, którzy są chirurgami
-26.	Wyświetl dostawców, z którymi zawarte umowy przekraczają 30% rocznego budżetu szpitala w bieżącym roku. Roczny budżet szpitala to 200% sumy wszystkich umów zawartych w danym roku.
-edit: ^ wydaje mi się, że brakuje trochę umów do wszystkich 4 powyższym, dodać
-27.	Wyszukaj wszystkich lekarzy, którzy mieli styczność z zarażonym pacjentem X.
-28.	Podaj Id działu oraz budynek działu, w którym lekarze o specjalności chirurg stanowią więcej niż 10% wszystkich lekarzy, ale mniej niż 50%
-29.	Wyświetl umowy, które trwały więcej niż miesiąc, zakończyły się i były najtańsze dla danego przedmiotu
-30. Znajdź Oddział / budynek (jak wolimy zrobic) na którego zaopatrzenie wydaje się najwiecej / najmniej pieniędzy (jak wolimy)
-31. Znajdź Oddział / budynek (jak wolimy zrobic) który ma najwięcej zaopatrzenia (suma ilości wszyskich przedmiotów)
+26.	Wyszukaj wszystkich lekarzy, którzy mieli styczność z zarażonym pacjentem X.
+27.	Podaj Id działu oraz budynek działu, w którym lekarze o specjalności chirurg stanowią więcej niż 10% wszystkich lekarzy, ale mniej niż 50%
+28.	Wyświetl umowy, które trwały więcej niż miesiąc, zakończyły się i były najtańsze dla danego przedmiotu
+29. Znajdź Oddział / budynek (jak wolimy zrobic) na którego zaopatrzenie wydaje się najwiecej / najmniej pieniędzy (jak wolimy)
+30. Znajdź Oddział / budynek (jak wolimy zrobic) który ma najwięcej zaopatrzenia (suma ilości wszyskich przedmiotów)

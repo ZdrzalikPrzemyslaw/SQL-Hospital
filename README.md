@@ -49,7 +49,7 @@ edit: ^ to samo co w 14
 19.	Wyświetl nazwiska pacjentów, którzy przebywali w szpitalu w pierwszym tygodniu maja dłużej niż 1 dzień.
 edit: ^ nie rozumiem
 20.	Wyświetl wszystkie kobiety, które przebywają aktualnie w szpitalu wraz z ich zaleceniami oraz przypisanym lekarzem rodzinnym.
-21.	Wyświetl lekarza, któremu należy się podwyżka, czyli takiego który wykonał najwięcej wizyt w poprzednim miesiącu oraz zarabia mniej niż średnia w jego oddziale.
+21.	Wyświetl lekarza, któremu należy się podwyżka, czyli takiego który wykonał najwięcej wizyt oraz zarabia mniej niż średnia w jego oddziale.
 edit: ^ dodać więcej wizyt i pacjentów
 22.	Wyświetl lekarzy, którzy pracują w budynku, w którym stawka godzinowa jest średnio najniższa oraz ich ordynator zarabia więcej niż średnia płaca ordynatorów.
 23.	Wyświetl nazwę oddziału, w którym maseczki stanowią mniej niż 10% całego wyposażenia oraz przebywa w nim aktualnie więcej niż 5 lekarzy.

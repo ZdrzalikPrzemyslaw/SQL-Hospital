@@ -203,7 +203,13 @@ and (w.data_zakonczenia_wizyty > GETDATE() or w.data_zakonczenia_wizyty is null)
 
 --21
 
--- chyba nie wiem do konca jak ma to dzialaæ
+SELECT TOP 1 COUNT(szpital.dbo.wizyty.ID) AS liczba_wizyt, szpital.dbo.lekarze.nazwisko
+FROM szpital.dbo.wizyty
+INNER JOIN szpital.dbo.lekarze ON szpital.dbo.wizyty.lekarz=szpital.dbo.lekarze.ID
+WHERE lekarz IN (select ID from szpital.dbo.lekarze l
+where l.zarobki < (select avg(zarobki) from szpital.dbo.lekarze l2 where oddzial = l.oddzial group by oddzial))
+GROUP BY szpital.dbo.lekarze.nazwisko
+ORDER BY COUNT(szpital.dbo.wizyty.ID) DESC;
 
 --22
 
@@ -226,8 +232,12 @@ and o.budynek in
 	order by zarobki.avg_zarobki
 )
 
---23 - 26
---skip
+--23 
+SELECT opis_oddzialu FROM szpital.dbo.oddzialy
+INNER JOIN szpital.dbo.wyposazenie l ON l.ID_oddzialu=szpital.dbo.oddzialy.ID
+INNER JOIN szpital.dbo.przedmioty ON l.ID_przedmiotu=szpital.dbo.przedmioty.ID
+WHERE nazwa = 'Lampy Dezynfekcyjne do Sterylizacji Pomieszczeñ' AND liczba > 0.1 * 
+(SELECT SUM(liczba) FROM szpital.dbo.wyposazenie r WHERE l.ID_oddzialu = r.ID_oddzialu GROUP BY ID_oddzialu);
 
 --26
 -- Pratkycznie powtórka query nr 14, usunac?

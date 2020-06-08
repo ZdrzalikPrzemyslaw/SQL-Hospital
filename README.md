@@ -51,7 +51,7 @@ edit: ^ nie rozumiem
 20.	Wyświetl wszystkie kobiety, które przebywają aktualnie w szpitalu wraz z ich zaleceniami oraz przypisanym lekarzem rodzinnym.
 21.	Wyświetl lekarza, któremu należy się podwyżka, czyli takiego który wykonał najwięcej wizyt oraz zarabia mniej niż średnia w jego oddziale.
 edit: ^ dodać więcej wizyt i pacjentów
-22.	Wyświetl lekarzy, którzy pracują w budynku, w którym stawka godzinowa jest średnio najniższa oraz ich ordynator zarabia więcej niż średnia płaca ordynatorów.
+22.	Wyświetl lekarzy, którzy pracują w budynku, w którym stawka godzinowa jest średnio najniższa.
 23.	Wyświetl nazwę oddziału, w którym maseczki stanowią mniej niż 10% całego wyposażenia oraz przebywa w nim aktualnie więcej niż 5 lekarzy.
 24.	Wyświetl dostawców, którzy dostarczają przedmioty dla więcej niż 20% wszystkich bydynków.
 25.	Wyświetl dostawców, z którymi zawarte umowy przekraczają 30% rocznego budżetu szpitala w bieżącym roku. Roczny budżet szpitala to 200% sumy wszystkich umów zawartych w danym roku.

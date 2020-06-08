@@ -353,7 +353,7 @@ WITH Szpital_Hierarchia AS
 SELECT * FROM Szpital_Hierarchia;
 GO
 
---32 - wszyscy lekarze którzy zarabiaj¹ mniej ni¿ minimalna stawka.
+--32
 
 Select l.imie, l.nazwisko, l.zarobki, l.specjalnosc, s.min_stawka from szpital.dbo.lekarze l, szpital.dbo.specjalnosci s
 where s.ID = l.specjalnosc

@@ -239,7 +239,7 @@ INNER JOIN szpital.dbo.przedmioty ON l.ID_przedmiotu=szpital.dbo.przedmioty.ID
 WHERE nazwa = 'Lampy Dezynfekcyjne do Sterylizacji Pomieszczeñ' AND liczba > 0.1 * 
 (SELECT SUM(liczba) FROM szpital.dbo.wyposazenie r WHERE l.ID_oddzialu = r.ID_oddzialu GROUP BY ID_oddzialu);
 
---26
+--25
 -- Pratkycznie powtórka query nr 14, usunac?
 
 select l.imie, l.nazwisko, l.gabinet, l.oddzial, o.opis_oddzialu, b.ID   from szpital.dbo.lekarze l, szpital.dbo.oddzialy o, szpital.dbo.budynki b
@@ -258,7 +258,7 @@ and l.specjalnosc in
 	as specjalnosci
 )
 
---27
+--26
 
 select l.imie, l.nazwisko, l.gabinet, l.oddzial from szpital.dbo.lekarze l
 where l.ID in
@@ -275,5 +275,33 @@ where l.ID in
 
 --29
 
--- jestem prawie pewien ¿e u nas cena przedmiotów nie zale¿y od umowy
+Select w.ID, w.opis_oddzialu from szpital.dbo.oddzialy w
+where w.ID in
+(
+	SELECT TOP 1 wydatki.ID_oddzialu from 
+	(
+		select w.ID_oddzialu, SUM(liczba * p.cena_jednostkowa) as suma_wydatkow from szpital.dbo.wyposazenie w, szpital.dbo.przedmioty p, szpital.dbo.oddzialy o
+		where w.ID_oddzialu = o.ID
+		and w.ID_przedmiotu = p.ID
+		group by w.ID_oddzialu
+	)
+	as wydatki
+	order by suma_wydatkow desc
+)
 
+--30
+
+Select b.*  from szpital.dbo.oddzialy w, szpital.dbo.budynki b
+where b.id = w.budynek
+and w.ID in
+(
+	SELECT TOP 1 ID_oddzialu from 
+	(
+		select w.ID_oddzialu, SUM(liczba) as liczba_wyposazenia from szpital.dbo.wyposazenie w, szpital.dbo.przedmioty p, szpital.dbo.oddzialy o
+				where w.ID_oddzialu = o.ID
+				and w.ID_przedmiotu = p.ID
+				group by w.ID_oddzialu
+	)
+	as ilosc
+	order by liczba_wyposazenia desc
+)

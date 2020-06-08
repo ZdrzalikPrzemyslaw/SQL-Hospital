@@ -58,5 +58,5 @@ edit: ^ dodać więcej wizyt i pacjentów
 26.	Wyszukaj wszystkich lekarzy, którzy mieli styczność z zarażonym pacjentem X.
 27.	Podaj ilu mikrobiologów lekarskich pracuje w działach, w których jest ich więcej niż 0 wraz z ich działami
 28.	Wyświetl umowy, które trwały więcej niż miesiąc i zakończyły się.
-29. Znajdź Oddział / budynek (jak wolimy zrobic) na którego zaopatrzenie wydaje się najwiecej / najmniej pieniędzy (jak wolimy)
-30. Znajdź Oddział / budynek (jak wolimy zrobic) który ma najwięcej zaopatrzenia (suma ilości wszyskich przedmiotów)
+29. 	Znajdź Oddział na którego zaopatrzenie wydaje się najwiecej pieniędzy.
+30. 	Znajdź budynek który ma najwięcej zaopatrzenia (suma ilości wszyskich przedmiotów)

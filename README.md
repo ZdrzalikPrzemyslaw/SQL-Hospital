@@ -59,3 +59,5 @@ edit: ^ dodać więcej wizyt i pacjentów
 27.	Wyświetl umowy, które trwały więcej niż miesiąc i zakończyły się.
 28. Znajdź Oddział na którego zaopatrzenie wydaje się najwiecej pieniędzy.
 29. Znajdź budynek który ma najwięcej zaopatrzenia (suma ilości wszyskich przedmiotów)
+30. Wyświetl najpopularnieszy dzien przyjec do szpitala
+31. Wyświetl hierarchię Szpitala (od głownych szefów, po ich 'podwładnych')

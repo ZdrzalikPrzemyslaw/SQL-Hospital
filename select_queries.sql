@@ -309,12 +309,30 @@ and w.ID in
 )
 go
 
---30 Wyswietl 10 najdro¿szych przedmiotów
+--30 Wyswietl najpopularniejszy dzien przyjec do szpitala
 
+select oddzial, count(*) as liczba_lekarzy_o_specjalnosci from szpital.dbo.lekarze l
+where l.specjalnosc in
+(
+	SELECT TOP 1 ID as i from 
+	(
+		select id, opis_specjalnosci
+		from szpital.dbo.specjalnosci
+		where opis_specjalnosci = 'Mikrobiologia lekarska'
+		group by
+			opis_specjalnosci, id
+	) 
+	as specjalnosci
+)
+group by oddzial
 
-select DATENAME(DW, w.data_wizyty) from szpital.dbo.wizyty w
-GO
---31 rekursja
+--30
+
+select top (1) DATENAME(DW, w.data_wizyty) as Najpopularniejszy_Dzien from szpital.dbo.wizyty w
+group by DATENAME(DW, w.data_wizyty)
+order by count(*) desc
+
+--31
 
 WITH Szpital_Hierarchia AS 
 (
@@ -330,3 +348,4 @@ WITH Szpital_Hierarchia AS
             ON o.ID = e.szef
 )
 SELECT * FROM Szpital_Hierarchia;
+GO

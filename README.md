@@ -10,7 +10,7 @@ Zalozenia:
 Też lekarzami rodzinnymi
 4. Pacjent może zapisać się na wizytę do dowolnego lekarza na określony dzień i godzinę
 5. W ramach każdej specjalności lekarz pacjent ma założoną kartę, na której zapisuje się przebieg leczenia: daty wizyt i zalecenia.
-6. Lekarze są pracownikami oddziałów. Jeden z lekarzy jest szefem oddziału. 
+6. Lekarze są pracownikami oddziałów. Jeden z lekarzy jest ordynatorem danego oddziału. Lekarze posiadają szefów, którzy również są lekarzami.
 7. Każdy Lekarz przyjmuje pacjenta w swoim gabinecie.
 8. Gabinety mogę znajdować się w różnych oddziałach (nr gabinetu jest unikalny dla oddziału).
 9. W każdym budynku znajduje się co najmniej jeden oddział
@@ -56,7 +56,6 @@ edit: ^ dodać więcej wizyt i pacjentów
 24.	Dla jakich budynków dostarczają dostawcy?
 25.	Wyszukaj wszystkich lekarzy wraz z przypisanym im gabinetem, oddziałem, budynkiem, którzy są chirurgami
 26.	Wyszukaj wszystkich lekarzy, którzy mieli styczność z zarażonym pacjentem X.
-27.	Podaj ilu mikrobiologów lekarskich pracuje w działach, w których jest ich więcej niż 0 wraz z ich działami
-28.	Wyświetl umowy, które trwały więcej niż miesiąc i zakończyły się.
-29. Znajdź Oddział na którego zaopatrzenie wydaje się najwiecej pieniędzy.
-30. Znajdź budynek który ma najwięcej zaopatrzenia (suma ilości wszyskich przedmiotów)
+27.	Wyświetl umowy, które trwały więcej niż miesiąc i zakończyły się.
+28. Znajdź Oddział na którego zaopatrzenie wydaje się najwiecej pieniędzy.
+29. Znajdź budynek który ma najwięcej zaopatrzenia (suma ilości wszyskich przedmiotów)

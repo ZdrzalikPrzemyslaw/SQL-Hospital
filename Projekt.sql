@@ -74,10 +74,12 @@ CREATE TABLE szpital.dbo.lekarze (
 	zarobki MONEY NOT NULL,
 	oddzial INT Not null,
 	gabinet INT not null, 
+	szef int,
 	
 	PRIMARY KEY(ID),
 	FOREIGN KEY (specjalnosc) REFERENCES szpital.dbo.specjalnosci(ID),
 	FOREIGN KEY(gabinet, oddzial) REFERENCES szpital.dbo.gabinety(nr_gabinetu, oddzial),
+	foreign key(szef) references szpital.dbo.lekarze(ID),
 	UNIQUE(gabinet, oddzial)
 );
 GO
@@ -204,7 +206,6 @@ CREATE TABLE szpital.dbo.umowy (
 	ID INT NOT NULL,
 	data_rozpoczecia DATE NOT NULL,
 	data_zakonczenia DATE,
-	wartosc MONEY NOT NULL,
 
 	PRIMARY KEY (ID),
 )

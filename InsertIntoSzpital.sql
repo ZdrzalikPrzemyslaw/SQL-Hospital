@@ -203,26 +203,28 @@ GO
 /*
 SELECT * from szpital.dbo.specjalnosci;
 */
-
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(001, 'Kowalski', 'Janusz', '19480521', 'M', '+4842621233789', 13, 12876, 8, 203);
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(002, 'Kowalska', 'Wies³awa', '19510101', 'K', '+4842122239591', 17, 9782, 8, 204);
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(003, 'Zdrzalik', 'Przemys³aw', '19990721', 'M', '+48665074716', 21, 8650, 8, 205);
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(004, 'Dudkiewicz', 'Micha³', '19950613', 'M', '+4842664271216', 01, 9250, 7, 202);
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(005, 'Domañski', 'Karol', '19910208', 'M', '+4842621312456', 54, 7150, 6, 101);
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(006, 'Pietrzak', 'Witold', '19990429', 'M', '+4842628317123', 69, 12150, 5, 104);
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(007, 'Wilczyñski', 'Kamil', '19991122', 'M', '+4842631279377', 74, 11111, 4, 205);
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(008, 'Zo³¹dkowa', 'Izabela', '19990309', 'K', '+4842539128983', 32, 22222, 3, 202);
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(009, 'Kwiatkowski', 'Kamil', '19990729', 'M', '+4842321357890', 69, 69420, 2, 202);
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(010, 'Banaszkiewicz', 'Dawid', '19990204', 'M', '+4842123512345', 12, 21200, 1, 201);
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(011, 'Ró¿añska', 'Natalia', '20010124', 'K', '+4822852908704', 7, 12677, 1, 202);
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(012, 'Sobczyk', 'Bartosz', '19990814', 'M', '+4842123881299', 44, 44444, 1, 205);
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(013, 'Stefañski', 'Krystian', '19990218', 'M', '+4842312356870', 32, 17850, 5, 101);
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(014, 'Kocañda', 'Adrian', '19921014', 'M', '+4842123456789', 56, 12012, 7, 103);
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(015, 'Marczyk', 'Aleksandra', '19990212', 'K', '+4842807795120', 42, 14567, 5, 102);
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(016, 'Zawiœlak', 'Ma³gorzata', '20000414', 'K', '+4842312598027', 20, 21370, 3, 104);
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(017, 'Szymañska', 'Julia', '19990508', 'K', '+4842380167923', 59, 38071, 8, 105);
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(018, 'Ma³ysz', 'Adam', '19990312', 'M', null, 44, 14567, 5, 111);
-INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet) Values(019, 'Anna', 'Ma³gorzata', '20010411', 'K', null, 44, 21370, 3, 112);
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(004, 'Dudkiewicz', 'Micha³', '19950613', 'M', '+4842664271216', 01, 9250, 7, 202, null);
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(003, 'Zdrzalik', 'Przemys³aw', '19990721', 'M', '+48665074716', 21, 8650, 8, 205, null);
+GO
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(018, 'Ma³ysz', 'Adam', '19990312', 'M', null, 44, 14567, 5, 111, 003);
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(017, 'Szymañska', 'Julia', '19990508', 'K', '+4842380167923', 59, 38071, 8, 105, 003);
+GO
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(001, 'Kowalski', 'Janusz', '19480521', 'M', '+4842621233789', 13, 12876, 8, 203, 017);
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(002, 'Kowalska', 'Wies³awa', '19510101', 'K', '+4842122239591', 17, 9782, 8, 204, 018);
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(005, 'Domañski', 'Karol', '19910208', 'M', '+4842621312456', 54, 7150, 6, 101, 017);
+GO
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(006, 'Pietrzak', 'Witold', '19990429', 'M', '+4842628317123', 69, 12150, 5, 104, 001);
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(007, 'Wilczyñski', 'Kamil', '19991122', 'M', '+4842631279377', 74, 11111, 4, 205, 002);
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(008, 'Zo³¹dkowa', 'Izabela', '19990309', 'K', '+4842539128983', 32, 22222, 3, 202, 005);
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(010, 'Banaszkiewicz', 'Dawid', '19990204', 'M', '+4842123512345', 12, 21200, 1, 201, 002);
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(011, 'Ró¿añska', 'Natalia', '20010124', 'K', '+4822852908704', 7, 12677, 1, 202, 001);
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(012, 'Sobczyk', 'Bartosz', '19990814', 'M', '+4842123881299', 44, 44444, 1, 205, 005);
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(013, 'Stefañski', 'Krystian', '19990218', 'M', '+4842312356870', 32, 17850, 5, 101, 001);
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(014, 'Kocañda', 'Adrian', '19921014', 'M', '+4842123456789', 56, 12012, 7, 103, 005);
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(015, 'Marczyk', 'Aleksandra', '19990212', 'K', '+4842807795120', 42, 14567, 5, 102, 002);
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(016, 'Zawiœlak', 'Ma³gorzata', '20000414', 'K', '+4842312598027', 20, 21370, 3, 104, 005);
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(019, 'Anna', 'Ma³gorzata', '20010411', 'K', null, 44, 21370, 3, 112, 001);
+INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(009, 'Kwiatkowski', 'Kamil', '19990729', 'M', '+4842321357890', 69, 69420, 2, 202, 002);
 GO
 /*
 TOOD:
@@ -326,11 +328,11 @@ SELECT * FROM szpital.dbo.wizyty;
 TODO: Rozbi³ bym powi¹zanie dostawców i umów na many to many tak mysle
 */
 
-INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia, wartosc) VALUES(1001, '2013-07-21', null, 100000);
-INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia, wartosc) VALUES(1002, '2011-03-12', '2018-01-20', 13370);
-INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia, wartosc) VALUES(1003, '2015-07-31', null, 42069);
-INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia, wartosc) VALUES(1004, '2017-04-15', null, 220020);
-INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia, wartosc) VALUES(1005, '2020-04-28', null, 1337420);
+INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia) VALUES(1001, '2013-07-21', null);
+INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia) VALUES(1002, '2011-03-12', '2018-01-20');
+INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia) VALUES(1003, '2015-07-31', null);
+INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia) VALUES(1004, '2017-04-15', null);
+INSERT INTO szpital.dbo.umowy(ID, data_rozpoczecia, data_zakonczenia) VALUES(1005, '2020-04-28', null);
 GO
 
 /*

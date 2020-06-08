@@ -269,11 +269,13 @@ where l.ID in
 	group by lekarz
 )
 
+--27
+
+select * from szpital.dbo.umowy u
+where u.data_zakonczenia is not null
+and DATEDIFF(DAY, u.data_rozpoczecia, u.data_zakonczenia) > 30
+
 --28
-
--- skipuje, dodaæ lekarzy tej samej specki do jednego dzialu
-
---29
 
 Select w.ID, w.opis_oddzialu from szpital.dbo.oddzialy w
 where w.ID in
@@ -289,7 +291,7 @@ where w.ID in
 	order by suma_wydatkow desc
 )
 
---30
+--29
 
 Select b.*  from szpital.dbo.oddzialy w, szpital.dbo.budynki b
 where b.id = w.budynek
@@ -305,3 +307,26 @@ and w.ID in
 	as ilosc
 	order by liczba_wyposazenia desc
 )
+go
+
+--30 Wyswietl 10 najdro¿szych przedmiotów
+
+
+select DATENAME(DW, w.data_wizyty) from szpital.dbo.wizyty w
+GO
+--31 rekursja
+
+WITH Szpital_Hierarchia AS 
+(
+    SELECT l.imie, l.nazwisko, l.ID, l.szef
+	FROM szpital.dbo.lekarze l
+    WHERE l.szef IS NULL
+    UNION ALL
+    SELECT 
+        e.imie, e.nazwisko, e.ID, e.szef
+    FROM 
+        szpital.dbo.lekarze e
+        INNER JOIN Szpital_Hierarchia o 
+            ON o.ID = e.szef
+)
+SELECT * FROM Szpital_Hierarchia;

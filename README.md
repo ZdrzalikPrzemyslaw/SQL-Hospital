@@ -62,3 +62,6 @@ edit: ^ wydaje mi się, że brakuje trochę umów do wszystkich 4 powyższym, do
 29.	Wyświetl umowy, które trwały więcej niż miesiąc, zakończyły się i były najtańsze dla danego przedmiotu
 30.	O ile procent więcej szpital wydaje na maseczki w porównaniu do zeszłego miesiąca?
 edit: ^ aktualnie chyba nie do zrobienia?
+
+31. Znajdź Oddział / budynek (jak wolimy zrobic) na którego zaopatrzenie wydaje się najwiecej / najmniej pieniędzy (jak wolimy)
+32. Znajdź Oddział / budynek (jak wolimy zrobic) który ma najwięcej zaopatrzenia (suma ilości wszyskich przedmiotów)

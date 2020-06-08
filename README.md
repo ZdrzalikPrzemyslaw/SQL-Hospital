@@ -49,16 +49,14 @@ edit: ^ to samo co w 14
 19.	Wyświetl nazwiska pacjentów, którzy przebywali w szpitalu w pierwszym tygodniu maja dłużej niż 1 dzień.
 edit: ^ nie rozumiem
 20.	Wyświetl wszystkie kobiety, które przebywają aktualnie w szpitalu wraz z ich zaleceniami oraz przypisanym lekarzem rodzinnym.
-21.	Wyświetl lekarza, któremu należy się podwyżka, czyli takiego który wykonał najwięcej wizyt w poprzednim miesiącu oraz zarabia mniej niż średnia w jego oddziale.
+21.	Wyświetl lekarza, któremu należy się podwyżka, czyli takiego który wykonał najwięcej wizyt oraz zarabia mniej niż średnia w jego oddziale.
 edit: ^ dodać więcej wizyt i pacjentów
-22.	Wyświetl lekarzy, którzy pracują w budynku, w którym stawka godzinowa jest średnio najniższa oraz ich ordynator zarabia więcej niż średnia płaca ordynatorów.
-23.	Wyświetl nazwę oddziału, w którym maseczki stanowią mniej niż 10% całego wyposażenia oraz przebywa w nim aktualnie więcej niż 5 lekarzy.
-24.	Wyświetl dostawców, którzy dostarczają przedmioty dla więcej niż 20% wszystkich bydynków.
-25.	Wyświetl dostawców, z którymi zawarte umowy przekraczają 30% rocznego budżetu szpitala w bieżącym roku. Roczny budżet szpitala to 200% sumy wszystkich umów zawartych w danym roku.
-edit: ^ wydaje mi się, że brakuje trochę umów do wszystkich 4 powyższym, dodać
-26.	Wyszukaj wszystkich lekarzy wraz z przypisanym im gabinetem, oddziałem, budynkiem, którzy są chirurgami
-27.	Wyszukaj wszystkich lekarzy, którzy mieli styczność z zarażonym pacjentem X.
-28.	Podaj Id działu oraz budynek działu, w którym lekarze o specjalności chirurg stanowią więcej niż 10% wszystkich lekarzy, ale mniej niż 50%
-29.	Wyświetl umowy, które trwały więcej niż miesiąc, zakończyły się i były najtańsze dla danego przedmiotu
-30.	O ile procent więcej szpital wydaje na maseczki w porównaniu do zeszłego miesiąca?
-edit: ^ aktualnie chyba nie do zrobienia?
+22.	Wyświetl lekarzy, którzy pracują w budynku, w którym stawka godzinowa jest średnio najniższa.
+23.	Wyświetl nazwę oddziału, w którym Lampy Dezynfekcyjne do Sterylizacji Pomieszczeń stanowią mniej niż 10% całego wyposażenia.
+24.	Dla jakich budynków dostarczają dostawcy?
+25.	Wyszukaj wszystkich lekarzy wraz z przypisanym im gabinetem, oddziałem, budynkiem, którzy są chirurgami
+26.	Wyszukaj wszystkich lekarzy, którzy mieli styczność z zarażonym pacjentem X.
+27.	Podaj ilu mikrobiologów lekarskich pracuje w działach, w których jest ich więcej niż 0 wraz z ich działami
+28.	Wyświetl umowy, które trwały więcej niż miesiąc i zakończyły się.
+29. Znajdź Oddział / budynek (jak wolimy zrobic) na którego zaopatrzenie wydaje się najwiecej / najmniej pieniędzy (jak wolimy)
+30. Znajdź Oddział / budynek (jak wolimy zrobic) który ma najwięcej zaopatrzenia (suma ilości wszyskich przedmiotów)

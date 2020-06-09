@@ -169,12 +169,6 @@ where p.lekarz_rodzinny in
 GO
 
 --19
-/*
-ale cyrk xD
-takie spaghetti ¿e ohoho z³oty
-a najlepsze ¿e nie wiem czy dziala xD
-ale mam nadziejê ¿e dziala
-*/
 
 select * from szpital.dbo.wizyty w
 where 

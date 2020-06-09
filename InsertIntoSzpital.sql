@@ -226,10 +226,6 @@ INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, spe
 INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(019, 'Anna', 'Ma³gorzata', '20010411', 'K', null, 44, 21370, 3, 112, 001);
 INSERT INTO szpital.dbo.lekarze (ID, nazwisko, imie, data_ur, plec, telefon, specjalnosc, zarobki, oddzial, gabinet, szef) Values(009, 'Kwiatkowski', 'Kamil', '19990729', 'M', '+4842321357890', 69, 69420, 2, 202, 002);
 GO
-/*
-TOOD:
-Pododawaj jeszcze jakiœ lekarzy bo ja ju¿ nie mam pomys³u kogo by daæ a tak z g³owy nie istniej¹cych ludzi mi siê nie chce wymyœlaæ
-*/
 
 /*
 SELECT * from szpital.dbo.lekarze;
@@ -247,9 +243,6 @@ INSERT INTO szpital.dbo.ordynatorzy(ID, data_rozpoczecia_kadencji, ID_lekarza) V
 SELECT * from szpital.dbo.ordynatorzy;
 */
 
-/*
-Jesli zmienimi miejsce nr dyplomu to po prostu przeniesc do odpowiednich lekarzy
-*/
 INSERT INTO szpital.dbo.rodzinni(ID_lekarza) VALUES(017);
 INSERT INTO szpital.dbo.rodzinni(ID_lekarza) VALUES(014);
 INSERT INTO szpital.dbo.rodzinni(ID_lekarza) VALUES(011);
@@ -260,11 +253,6 @@ GO
 /*
 SELECT * FROM szpital.dbo.lekarze WHERE ID IN
 	(SELECT ID_lekarza FROM szpital.dbo.rodzinni)
-*/
-
-/* 
-mamy wiecej lekarzy ni¿ pacjentów xD
-Ale juz taaak mi siê nie chce ich dodawac
 */
 
 INSERT INTO szpital.dbo.pacjenci(pesel, nazwisko, imie, data_ur, plec, telefon, lekarz_rodzinny) VALUES ('35102312345', 'Franke', 'Egon', '19351023', 'M', '+4842123456789', 001);
@@ -323,11 +311,6 @@ GO
 /*
 SELECT * FROM szpital.dbo.wizyty;
 */
-
-/* 
-TODO: Rozbi³ bym powi¹zanie dostawców i umów na many to many tak mysle
-*/
-
 
 INSERT INTO szpital.dbo.dostawcy(ID, nazwa, kraj) VALUES (101,  'Szampi Corp', 'PL');
 INSERT INTO szpital.dbo.dostawcy(ID, nazwa, kraj) VALUES (102,  'Labrador Company', 'PL');

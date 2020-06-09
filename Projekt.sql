@@ -2,17 +2,7 @@ DROP DATABASE IF EXISTS szpital;
 GO
 CREATE DATABASE szpital;
 GO
-/*
-Myœlê, ¿e pacjent mo¿e byc 2 razy w jednym szpitalu wiêc
-da³bym mu many to many z tabel¹ w której bêdzie data przyjêcia i data wyjazdu oraz oddzia³
-edit: od tego mamy kartê pacjenta z histori¹ jego wizyt :)
-*/
 
-
-/*
-TODO: pododawaj constrainty na liczby które powinny byæ wieksze od 0
-np iloœæ czegoœ, zarobki itp.
-*/
 
 CREATE TABLE szpital.dbo.specjalnosci (
 	ID INT NOT NULL,
@@ -22,11 +12,6 @@ CREATE TABLE szpital.dbo.specjalnosci (
 	PRIMARY KEY (ID)
 )
 
-/*
-TODO: uzupe³nic budynki, bo w budynku ma byc minimum jeden oddzial
-edit: chyba nie trzeba nic uzupe³niaæ jeœli chodzi o budynki. Wystarczy, ¿e oddzia³ jest many-to-one do budynku. 
-Doda³em tylko rok budowy dla urozmaicenia
-*/
 CREATE TABLE szpital.dbo.budynki (
 	ID INT NOT NULL,
 	PRIMARY KEY (ID),
@@ -37,11 +22,6 @@ CREATE TABLE szpital.dbo.oddzialy (
 	ID INT NOT NULL,
 	budynek INT not null,
 	opis_oddzialu varchar(100),
-	/*
-	Tak mysle co z tym szefem, i narazie nie wiem xD
-	edit: Dodaj¹c tutaj szefa duplikujemy informacjê w bazie danych (to info ju¿ jest w innej nowej tabeli). 
-	Lepiej zrobiæ ISA
-	*/
 
 	PRIMARY KEY(ID),
 	FOREIGN KEY (budynek) REFERENCES szpital.dbo.budynki(ID),
@@ -52,10 +32,6 @@ CREATE TABLE szpital.dbo.gabinety (
 	oddzial INT not null,
 
 	FOREIGN KEY (oddzial) REFERENCES szpital.dbo.oddzialy(ID),
-	/*
-	ja nie jestem pewien czy ten primary key jest git, ale siê nie pluje sql wiec chyba git xdd
-	edit: chyba git :P
-	*/
 	PRIMARY KEY (nr_gabinetu, oddzial)
 )
 
@@ -109,10 +85,6 @@ CREATE TABLE szpital.dbo.ordynatorzy (
 	FOREIGN KEY (ID_lekarza) REFERENCES szpital.dbo.lekarze(ID)
 );
 GO
-/*
-Próbujê zrobiæ funckjê sprawdzaj¹c¹ unikalnoœæ oddzialu lekarza, ¿eby nie by³o 2 szefów jednego oddzialu
-i tak se mi to idzie xd
-*/
 CREATE OR ALTER PROCEDURE dbo.checkOddzialUnique(@ID_wyb_lekarza INT)
 as 
 begin
@@ -122,9 +94,6 @@ end
 
 Go
 
-/*
-jakies dziwne to z tym nr dyplomu ¿e to jest tutaj a nie po prostu u lekarzy
-*/
 CREATE TABLE szpital.dbo.rodzinni (
 	ID INT NOT NULL IDENTITY(1,1),
 	ID_lekarza INT NOT NULL,
@@ -140,10 +109,6 @@ CREATE TABLE szpital.dbo.pacjenci (
 	data_ur DATE NOT NULL,
 	plec VARCHAR(1),
 	telefon VARCHAR(15),
-	/* 
-	Nie wiem tego lekarza rodzinnego tbh
-	edit: ISA, done
-	*/
 	lekarz_rodzinny INT NOT NULL,
 
 	CONSTRAINT peselConstraint
@@ -159,10 +124,6 @@ CREATE TABLE szpital.dbo.wizyty (
 	ID INT IDENTITY(1,1) NOT NULL, 
 	lekarz INT NOT NULL,
 	zalecenia VARCHAR(100),
-	/*
-	czy powinno byc ograniczenie ze to musi byc w czasie kiedy pacjent jest w szpitalu?
-	edit: doda³em datê zakoñczenia i zalecenia
-	*/
 	pacjent VARCHAR(11) NOT NULL,
 	data_wizyty DATETIME2 NOT NULL,
 	data_zakonczenia_wizyty DATETIME2 NULL,
@@ -173,36 +134,6 @@ CREATE TABLE szpital.dbo.wizyty (
 	FOREIGN KEY (lekarz) REFERENCES szpital.dbo.lekarze(ID),
 	FOREIGN KEY (pacjent) REFERENCES szpital.dbo.pacjenci(pesel),
 )
-
-/*
-edit: doda³em kartê
-*/
-
-
-/*
-EDIT: robiê to i stwierdzam ¿e karta nic nie daje, równie dobrze mo¿emy mieæ w wizycie ID pacjenta
-CREATE TABLE szpital.dbo.karta (
-	ID INT IDENTITY(1,1) NOT NULL, 
-	pacjent VARCHAR(11) NOT NULL,
-	id_wizyty INT NOT NULL,
-
-	PRIMARY KEY (ID),
-	FOREIGN KEY (pacjent) REFERENCES szpital.dbo.pacjenci(pesel),
-	FOREIGN KEY (id_wizyty) REFERENCES szpital.dbo.wizyty(ID),
-)
-*/
-
-/*
-wyposa¿enie oddzia³u, przedmioty, umowy i dostawy:
-*/
-
-/*
-co to tak wgl ma byc wartosc tutaj? ¯e suma wartosci przedmiotów w umowie?
-*/
-
-/* 
-TODO: Rozbi³ bym powi¹zanie dostawców i umów na many to many tak mysle
-*/
 
 CREATE TABLE szpital.dbo.dostawcy (
 	ID INT NOT NULL,
@@ -231,9 +162,6 @@ CREATE TABLE szpital.dbo.umowy (
 CREATE TABLE szpital.dbo.historia_transakcji (
 	ID_umowy INT NOT NULL,
 	status_umowy VARCHAR(10) NOT NULL, 
-
-
-	/* tutaj mozna jebac constrainta smialo na ten status zeby byl zakonczony/ w trakcie czy co tam pasuje */
 
 	CONSTRAINT status_umowy_possible_values
 	CHECK ((status_umowy) in ('rozpoczeta', 'zakonczona', 'w trakcie', 'anulowana')), 

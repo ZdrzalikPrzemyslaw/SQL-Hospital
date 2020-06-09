@@ -55,7 +55,9 @@ CREATE TABLE szpital.dbo.lekarze (
 	UNIQUE(gabinet, oddzial),
 	constraint zarobki_wieksze_od_0 check (zarobki > 0),
 	CONSTRAINT plecConstraintLekarz
-	CHECK (plec like '[K|M]')
+	CHECK (plec like '[K|M]'),
+	CONSTRAINT lekarzUrodzonyWPrzeszlosci check
+	(data_ur < GETDATE())
 );
 GO
 
@@ -115,6 +117,8 @@ CREATE TABLE szpital.dbo.pacjenci (
 	CHECK (pesel like '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
 	CONSTRAINT plecConstraint
 	CHECK (plec like '[K|M]'),
+	CONSTRAINT pacjentUrodzonyWPrzeszlosci check
+	(data_ur < GETDATE()),
 
 	PRIMARY KEY(pesel),
 	FOREIGN KEY (lekarz_rodzinny) REFERENCES szpital.dbo.rodzinni(ID)

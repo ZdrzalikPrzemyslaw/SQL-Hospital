@@ -2,27 +2,28 @@
 SELECT nazwisko, ID, data_ur FROM szpital.dbo.lekarze
 WHERE nazwisko = 'Zdrzalik' OR nazwisko = 'Dudkiewicz'
 ORDER BY data_ur ASC;
+GO
 
 --2 
 SELECT szpital.dbo.lekarze.nazwisko, data_rozpoczecia_kadencji,
 DATEADD(WEEK, DATEDIFF(WEEK, 0, DATEADD(MONTH, 6, data_rozpoczecia_kadencji)), 0) AS kiedy 
 FROM szpital.dbo.ordynatorzy
 INNER JOIN szpital.dbo.lekarze ON szpital.dbo.ordynatorzy.ID_lekarza=szpital.dbo.lekarze.ID;
-
+GO
 --3
 SELECT nazwisko, specjalnosc, oddzial FROM szpital.dbo.lekarze
 WHERE oddzial IN 
 (SELECT szpital.dbo.oddzialy.ID FROM szpital.dbo.oddzialy 
 WHERE szpital.dbo.oddzialy.budynek = 
 (SELECT TOP 1 szpital.dbo.budynki.ID FROM szpital.dbo.budynki ORDER BY data_budowy ASC));
-
+GO
 --4
 SELECT l.nazwisko AS lekarz, l.oddzial, r.nazwisko AS kolega
 FROM szpital.dbo.lekarze l, szpital.dbo.lekarze r
 WHERE l.oddzial = r.oddzial
 	AND l.ID != r.ID
 ORDER BY l.oddzial, l.nazwisko, r.nazwisko;
-
+GO
 --5
 SELECT nazwisko FROM szpital.dbo.lekarze
 WHERE oddzial = 
@@ -31,21 +32,21 @@ WHERE ID =
 (SELECT ID_lekarza FROM szpital.dbo.ordynatorzy
 WHERE ID_lekarza IN 
 (SELECT ID FROM szpital.dbo.lekarze WHERE nazwisko = 'Dudkiewicz'))) AND nazwisko != 'Dudkiewicz';
-
+GO
 --6
 SELECT imie, nazwisko, zarobki FROM szpital.dbo.lekarze
 WHERE telefon IS NOT NULL;
-
+GO
 --7
 SELECT imie + ' ' + nazwisko AS lekarze FROM szpital.dbo.lekarze
 WHERE nazwisko LIKE '__a%';
-
+GO
 --8
 SELECT imie, nazwisko, oddzial, specjalnosc 
 FROM szpital.dbo.lekarze
 WHERE oddzial IN 
 (SELECT ID FROM szpital.dbo.oddzialy WHERE budynek = '101');
-
+GO
 --9
 SELECT oddzial, 
 (SELECT MIN(zarobki) FROM szpital.dbo.lekarze l
@@ -55,7 +56,7 @@ WHERE r.oddzial =
 (SELECT TOP 1 oddzial FROM szpital.dbo.lekarze
 GROUP BY oddzial
 ORDER BY AVG(zarobki) DESC);
-
+GO
 --10
 
 SELECT data_rozpoczecia_kadencji, imie, nazwisko from szpital.dbo.ordynatorzy o, szpital.dbo.lekarze l
@@ -73,7 +74,7 @@ and year(o.data_rozpoczecia_kadencji) in
 	as years
 	order by years.numof desc
 )
-
+GO
 --11
 SELECT imie, nazwisko from szpital.dbo.lekarze l
 where l.id in 
@@ -99,7 +100,7 @@ GO
 
 select imie, nazwisko, zarobki, specjalnosc from szpital.dbo.lekarze l
 where l.zarobki < (select avg(zarobki) from szpital.dbo.lekarze l2 where oddzial = l.oddzial group by oddzial)
-
+GO
 --14
 
 select oddzial, count(*) as liczba_lekarzy_o_specjalnosci from szpital.dbo.lekarze l
@@ -116,7 +117,7 @@ where l.specjalnosc in
 	as specjalnosci
 )
 group by oddzial
-
+GO
 --15
 
 select nazwisko, o.id, l.zarobki - b.avg_zarobki as roznica_od_sredniej_zarobkow from 
@@ -154,7 +155,7 @@ where id not in (
 		group by oddzial
 	)
 )
-
+GO
 --18
 
 select nazwisko from szpital.dbo.pacjenci p
@@ -180,7 +181,7 @@ or
 (datepart(year, w.data_zakonczenia_wizyty) - datepart(year, w.data_wizyty) > 0 
 and
 (datepart(wk, w.data_zakonczenia_wizyty) > datepart(wk, concat(YEAR(w.data_wizyty),'-05-01'))))
-
+GO
 
 --20
 
@@ -194,7 +195,7 @@ and l.ID = r.ID_lekarza
 and w.pacjent = p.pesel
 and w.data_wizyty < GETDATE()
 and (w.data_zakonczenia_wizyty > GETDATE() or w.data_zakonczenia_wizyty is null)
-
+GO
 --21
 
 SELECT TOP 1 COUNT(szpital.dbo.wizyty.ID) AS liczba_wizyt, szpital.dbo.lekarze.nazwisko
@@ -204,7 +205,7 @@ WHERE lekarz IN (select ID from szpital.dbo.lekarze l
 where l.zarobki < (select avg(zarobki) from szpital.dbo.lekarze l2 where oddzial = l.oddzial group by oddzial))
 GROUP BY szpital.dbo.lekarze.nazwisko
 ORDER BY COUNT(szpital.dbo.wizyty.ID) DESC;
-
+GO
 --22
 
 SELECT l.nazwisko, l.imie, l.telefon, l.zarobki, l.oddzial, l.gabinet from szpital.dbo.lekarze l, szpital.dbo.oddzialy o
@@ -223,7 +224,7 @@ and o.budynek in
 	as zarobki
 	order by zarobki.avg_zarobki
 )
-
+GO
 --23 
 SELECT opis_oddzialu FROM szpital.dbo.oddzialy
 INNER JOIN szpital.dbo.wyposazenie l ON l.ID_oddzialu=szpital.dbo.oddzialy.ID
@@ -333,9 +334,12 @@ GO
 Select l.imie, l.nazwisko, l.zarobki, l.specjalnosc, s.min_stawka from szpital.dbo.lekarze l, szpital.dbo.specjalnosci s
 where s.ID = l.specjalnosc
 and l.zarobki < s.min_stawka
+GO
 
 --32
+
 SELECT * FROM szpital.dbo.oddzialy as o
 WHERE NOT EXISTS (( SELECT p.ID FROM szpital.dbo.przedmioty as p )
 EXCEPT
 (SELECT w.ID_przedmiotu FROM szpital.dbo.wyposazenie w WHERE w.ID_oddzialu = o.ID ) );
+GO

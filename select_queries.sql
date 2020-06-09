@@ -213,8 +213,6 @@ ORDER BY COUNT(szpital.dbo.wizyty.ID) DESC;
 
 --22
 
---zrobi³em po prostu lekarzy którzy pracuj¹ w budynku w którym s¹ najmniejsze zarobki
-
 SELECT l.nazwisko, l.imie, l.telefon, l.zarobki, l.oddzial, l.gabinet from szpital.dbo.lekarze l, szpital.dbo.oddzialy o
 where o.ID = l.oddzial
 and o.budynek in
@@ -239,8 +237,7 @@ INNER JOIN szpital.dbo.przedmioty ON l.ID_przedmiotu=szpital.dbo.przedmioty.ID
 WHERE nazwa = 'Lampy Dezynfekcyjne do Sterylizacji Pomieszczeñ' AND liczba > 0.1 * 
 (SELECT SUM(liczba) FROM szpital.dbo.wyposazenie r WHERE l.ID_oddzialu = r.ID_oddzialu GROUP BY ID_oddzialu);
 GO
---25
--- Pratkycznie powtórka query nr 14, usunac?
+--24
 
 select l.imie, l.nazwisko, l.gabinet, l.oddzial, o.opis_oddzialu, b.ID   from szpital.dbo.lekarze l, szpital.dbo.oddzialy o, szpital.dbo.budynki b
 where l.oddzial = o.ID 
@@ -259,7 +256,7 @@ and l.specjalnosc in
 )
 GO
 
---26
+--25
 
 select l.imie, l.nazwisko, l.gabinet, l.oddzial from szpital.dbo.lekarze l
 where l.ID in
@@ -271,13 +268,13 @@ where l.ID in
 )
 GO
 
---27
+--26
 
 select * from szpital.dbo.umowy u
 where u.data_zakonczenia is not null
 and DATEDIFF(DAY, u.data_rozpoczecia, u.data_zakonczenia) > 30
 Go
---28
+--27
 
 Select w.ID, w.opis_oddzialu from szpital.dbo.oddzialy w
 where w.ID in
@@ -294,7 +291,7 @@ where w.ID in
 )
 GO
 
---29
+--28
 
 Select b.*  from szpital.dbo.oddzialy w, szpital.dbo.budynki b
 where b.id = w.budynek
@@ -312,7 +309,7 @@ and w.ID in
 )
 go
 
---30 Wyswietl najpopularniejszy dzien przyjec do szpitala
+--29 Wyswietl najpopularniejszy dzien przyjec do szpitala
 
 select oddzial, count(*) as liczba_lekarzy_o_specjalnosci from szpital.dbo.lekarze l
 where l.specjalnosc in

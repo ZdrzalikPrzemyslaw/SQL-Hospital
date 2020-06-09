@@ -349,3 +349,9 @@ GO
 Select l.imie, l.nazwisko, l.zarobki, l.specjalnosc, s.min_stawka from szpital.dbo.lekarze l, szpital.dbo.specjalnosci s
 where s.ID = l.specjalnosc
 and l.zarobki < s.min_stawka
+
+--33
+SELECT * FROM szpital.dbo.oddzialy as o
+WHERE NOT EXISTS (( SELECT p.ID FROM szpital.dbo.przedmioty as p )
+EXCEPT
+(SELECT w.ID_przedmiotu FROM szpital.dbo.wyposazenie w WHERE w.ID_oddzialu = o.ID ) );

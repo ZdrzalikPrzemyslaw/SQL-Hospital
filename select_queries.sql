@@ -338,8 +338,8 @@ GO
 
 --32
 
-SELECT * FROM szpital.dbo.oddzialy as o
-WHERE NOT EXISTS (( SELECT p.ID FROM szpital.dbo.przedmioty as p )
+SELECT * FROM szpital.dbo.wyposazenie as o
+WHERE NOT EXISTS (( SELECT szpital.dbo.przedmioty.ID FROM szpital.dbo.przedmioty)
 EXCEPT
-(SELECT w.ID_przedmiotu FROM szpital.dbo.wyposazenie w WHERE w.ID_oddzialu = o.ID ) );
+(SELECT w.ID FROM szpital.dbo.oddzialy w WHERE w.ID = o.ID_oddzialu) );
 GO

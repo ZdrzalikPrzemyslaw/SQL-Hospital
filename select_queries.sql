@@ -335,4 +335,3 @@ Select l.imie, l.nazwisko, l.zarobki, l.specjalnosc, s.min_stawka from szpital.d
 where s.ID = l.specjalnosc
 and l.zarobki < s.min_stawka
 GO
-

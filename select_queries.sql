@@ -268,6 +268,7 @@ select * from szpital.dbo.umowy u
 where u.data_zakonczenia is not null
 and DATEDIFF(DAY, u.data_rozpoczecia, u.data_zakonczenia) > 30
 Go
+
 --27
 
 Select w.ID, w.opis_oddzialu from szpital.dbo.oddzialy w
@@ -305,28 +306,11 @@ go
 
 --29
 
-select oddzial, count(*) as liczba_lekarzy_o_specjalnosci from szpital.dbo.lekarze l
-where l.specjalnosc in
-(
-	SELECT TOP 1 ID as i from 
-	(
-		select id, opis_specjalnosci
-		from szpital.dbo.specjalnosci
-		where opis_specjalnosci = 'Mikrobiologia lekarska'
-		group by
-			opis_specjalnosci, id
-	) 
-	as specjalnosci
-)
-group by oddzial
-Go
---30
-
 select top (1) DATENAME(DW, w.data_wizyty) as Najpopularniejszy_Dzien from szpital.dbo.wizyty w
 group by DATENAME(DW, w.data_wizyty)
 order by count(*) desc
 GO
---31
+--30
 
 WITH Szpital_Hierarchia AS 
 (
@@ -344,13 +328,13 @@ WITH Szpital_Hierarchia AS
 SELECT * FROM Szpital_Hierarchia;
 GO
 
---32
+--31
 
 Select l.imie, l.nazwisko, l.zarobki, l.specjalnosc, s.min_stawka from szpital.dbo.lekarze l, szpital.dbo.specjalnosci s
 where s.ID = l.specjalnosc
 and l.zarobki < s.min_stawka
 
---33
+--32
 SELECT * FROM szpital.dbo.oddzialy as o
 WHERE NOT EXISTS (( SELECT p.ID FROM szpital.dbo.przedmioty as p )
 EXCEPT

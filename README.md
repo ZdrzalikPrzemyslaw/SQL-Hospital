@@ -26,6 +26,7 @@ Też lekarzami rodzinnymi
 
 
 Zapytania:
+
 1.	Wyświetl nazwiska, identyfikatory specjalizacji i datę urodzenia dla lekarzy o nazwisku Nazwisko1 oraz Nazwisko2. Wynik posortuj rosnąco. 
 2.	Dla każdego ordynatora wyświetl jego nazwisko, datę rozpoczęcia kadencji oraz datę podwyżki. Data podwyżki (z etykietą kiedy) to pierwszy poniedziałek po sześciu miesiącach trwania kadencji.
 3.	Wyświetl nazwiska, identyfikator specjalizacji, numer oddziału dla pracowników pracujących w najstarszym budynku.
@@ -49,12 +50,13 @@ Zapytania:
 21.	Wyświetl lekarza, któremu należy się podwyżka, czyli takiego który wykonał najwięcej wizyt oraz zarabia mniej niż średnia w jego oddziale.
 22.	Wyświetl lekarzy, którzy pracują w budynku, w którym stawka godzinowa jest średnio najniższa.
 23.	Wyświetl nazwę oddziału, w którym Lampy Dezynfekcyjne do Sterylizacji Pomieszczeń stanowią mniej niż 10% całego wyposażenia.
-24.	Dla jakich budynków dostarczają dostawcy?
-25.	Wyszukaj wszystkich lekarzy wraz z przypisanym im gabinetem, oddziałem, budynkiem, którzy są chirurgami
-26.	Wyszukaj wszystkich lekarzy, którzy mieli styczność z zarażonym pacjentem X.
-27.	Wyświetl umowy, które trwały więcej niż miesiąc i zakończyły się.
-28. Znajdź Oddział na którego zaopatrzenie wydaje się najwiecej pieniędzy.
-29. Znajdź budynek który ma najwięcej zaopatrzenia (suma ilości wszyskich przedmiotów)
-30. Wyświetl najpopularnieszy dzien przyjec do szpitala
-31. Wyświetl hierarchię Szpitala (od głownych szefów, po ich 'podwładnych')
-32. Wyświetl wszystkich lekarzy zarabiających mniej, niż minimalna stawka dla ich specjalności.
+24.	Wyszukaj wszystkich lekarzy wraz z przypisanym im gabinetem, oddziałem, budynkiem, którzy są mikrobiologami
+25.	Wyszukaj wszystkich lekarzy, którzy mieli styczność z zarażonym pacjentem X.
+26.	Wyświetl umowy, które trwały więcej niż miesiąc i zakończyły się.
+27. 	Znajdź Oddział na którego zaopatrzenie wydaje się najwiecej pieniędzy.
+28. 	Znajdź budynek który ma najwięcej zaopatrzenia (suma ilości wszyskich przedmiotów)
+29. 	Wyświetl najpopularniejszy dzien przyjec do szpitala
+30. 	Wyświetl hierarchię Szpitala (od głownych szefów, po ich 'podwładnych')
+31. 	Wyświetl wszystkich lekarzy zarabiających mniej, niż minimalna stawka dla ich specjalności.
+32. 	Znajdź dostawców, którzy dostarczają do wszystkich oddziałów.
+

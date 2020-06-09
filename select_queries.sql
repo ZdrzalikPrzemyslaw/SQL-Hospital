@@ -303,7 +303,7 @@ and w.ID in
 )
 go
 
---29 Wyswietl najpopularniejszy dzien przyjec do szpitala
+--29
 
 select oddzial, count(*) as liczba_lekarzy_o_specjalnosci from szpital.dbo.lekarze l
 where l.specjalnosc in
